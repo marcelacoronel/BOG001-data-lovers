@@ -1,11 +1,12 @@
 // estas funciones son de ejemplo
 
- export const example = () => {
-
+ export const example = ( )=> {
+  
+    
 
 
   
-  return 'example';
+  return example;
 };
 
 export const anotherExample = () => {
