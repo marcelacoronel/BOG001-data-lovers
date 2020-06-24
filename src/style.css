@@ -8,16 +8,13 @@ body{
 background-image: url("img/fondo.jpg");
 font-family: fantasy;
 background-size: cover;
-/* width: 100%;
-height: 50%; */
+
 }
 
 header{
   background: #88A7C9;
-  opacity: 0.8;
-  
-
- 
+  opacity: 0.9;
+ width: 100%;   
 }
 header #logo{
   width: 10%;
@@ -30,9 +27,8 @@ header #logo{
 nav{
   float: right;
   padding-right: 50mm ;
-  padding-top: 0em;
- 
- 
+  padding-top: 0em; 
+  
 }
 
 nav ul li{
@@ -40,6 +36,7 @@ nav ul li{
   display: inline-block;  
     margin: 2mm;
     font-size: 6mm ;
+
   }
 
 nav ul li a {
@@ -85,7 +82,7 @@ text-align: center;
 
 footer{
   background: #C71616;
-  opacity: 0.8;
+  opacity: 0.9;
   position: fixed;   
   bottom: 0;
   width: 100%; 
