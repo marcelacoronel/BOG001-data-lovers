@@ -6,18 +6,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header> Pokémon Go</header>
-    <nav>
-       <ul>
-         <li><a href="">Conoce tu pokémon</a></li>
-         <li><a href="">Evoluciones</a></li>
-         <li><a href="">Combate</a></li>
-       </ul>
-    </nav>
+    <header> 
+      <img id="logo" src="img/logo.png" alt="">
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#" id="botonMenu2">Conoce tu pokémon</a></li>
+          <li><a href="#">Evoluciones</a></li>
+          <li><a href="#">Combate</a></li>
+          <!-- arregar id -->
+        </ul>
+     </nav>
+    </header>
+   
     <div id="root">
-      <div class="section">
-        <label>Introduce el nombre o el numero del pokemon que quieres buscar</label>
-        <input id="nombreNumero"/>
+     
+      <div id="vistaPpal">
+        
+          <p>Bienvenido <br><br>
+            DESCUBRE EL MUNDO DE POKÉMON: <br><br>
+            Explora, descubre y atrapa nuevos Pokémon donde vayas,<br> haz que tu pokémon sea más fuerte<br> y compite en épicos combates de Gimnasio.<br><br>
+            ¡Es hora de ponerse en marcha! <br><br>
+            ¡Te esperan miles de aventuras!
+            
+             ¡Let's GO!</p>
+
+      </div>
+
+
+      <div id="vistaConoceP">
+        <p>Encuentra tu Pokémon por número o nombre</p>
+        <label for="">Número o Nombre</label>
+        <input type="text" id="numPokemon">
         <button class="btn" id="boton">Mostrar</button>
           <table>
             <thead>
