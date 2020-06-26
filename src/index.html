@@ -35,24 +35,73 @@
 
 
       <div id="vistaConoceP">
-        <p>Encuentra tu Pokémon por número o nombre</p>
+        <p id="titulovistaConocer">Encuentra tu Pokémon por número o nombre</p>
         <label for="">Número o Nombre</label>
         <input type="text" id="numPokemon">
         <button class="btn" id="boton">Mostrar</button>
-          <table>
-            <thead>
-              <tr>
-                <th id="Numero">Número</th>
-                <th id="Nombre">Nombre</th>
-                <th id="peso"> peso</th> 
-                <img id="imagen"/>
-              </tr>
-            </thead>
-            <tbody id="respuesta">
+        <div id="carateristicas">
+          <div id="imgPokemon">
+            <img id="ImgPok"/>
+            <p class="textImage" id="textNumber"></p>
+            <p class="textImage" id="textName"></p>
+          </div>
+          <div id="atributo">
+            <div id= "atributo2">
+              <div id="linea1">
+                <h3 id="titulo"  >Características Únicas</h3>
+              </div>
+              <div id="linea2">
+                <div id="altura"> 
+                  <div id="alturatitulo">
+                    <p class="tituloatributo">Altura</p>
+                  </div>
+                  <div id="alturavalor">
+                    <p class="altuValor" id="alturavalordata"></p>
+                  </div>
+                </div>
+                <div id="peso">
+                  <div id="alturatitulo">
+                    <p class="tituloatributo">Peso</p>
+                  </div>
+                  <div id="alturavalor">
+                    <p class="altuValor"  id="pesovalordata"></p>
+                  </div>
+                </div>
+                <div id="multiplicador">
+                  <div id="alturatitulo">
+                    <p class="tituloatributo">Multiplicador</p>
+                  </div>
+                  <div id="alturavalor">
+                    <p class="altuValor" id="multi1"></p>
+                    <p class="altuValor" id="multi2"></p>
+                  </div>
+                </div>
+              </div>
+              <div id="linea3">
+                <div id="tipo">
+                  <div class="tipotitulo">
+                    <p class="tituloatributo">Tipo</p>
+                  </div>
+                  <div class="tipovalor">
 
-            </tbody>
+                  </div>
+                </div>
+                <div id="debilidades">
+                  <div class="tipotitulo">
+                    <p class="tituloatributo">Debilidades</p>
+                  </div>
+                  <div class="tipovalor">
 
-          </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div> 
+          
+        
 
       </div>
 

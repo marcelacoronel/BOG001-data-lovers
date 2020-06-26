@@ -50,13 +50,35 @@ function llenarFrontPokemon(valor){
      alert('No se encontro el pokemon')
      return
    }
+   
+
+   //Se limpia la data
+   document.getElementById("multi1").innerHTML = null
+   document.getElementById("multi2").innerHTML = null
+
+   // Se llena la data del pokemon
+   document.getElementById("textNumber").innerHTML = "No "+pokemon.num
+   document.getElementById("textName").innerHTML = pokemon.name
+    document.getElementById("alturavalordata").innerHTML = pokemon.height
+    document.getElementById("pesovalordata").innerHTML = pokemon.weight
+    document.getElementById("ImgPok").src = pokemon.img
+    if (pokemon.multipliers != null)
+    {
+      for (let index = 0; index < pokemon.multipliers.length; index++) {
+        if(index == 0)
+        {
+          document.getElementById("multi1").innerHTML = pokemon.multipliers[index]
+        }
+        else if(index == 1)
+        {
+          document.getElementById("multi2").innerHTML = pokemon.multipliers[index]
+        }
+      }
+    }
 
 
-    document.getElementById("Numero").innerHTML = "numero:"+pokemon.id
-    document.getElementById("Nombre").innerHTML = pokemon.name
-    document.getElementById("imagen").src = pokemon.img
-    document.getElementById("peso").innerHTML=pokemon.weight
-    
+
+    // document.getElementById("imagen").src = pokemon.img    
     console.log(pokemon)
 }
 

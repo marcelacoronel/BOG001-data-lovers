@@ -2,6 +2,7 @@
 
 #vistaConoceP{
   display: none;
+  height: 100%;
 }
 
 body{
@@ -53,8 +54,8 @@ nav ul li a:hover {
 
 #root{
   background: #DEC02D;
-  opacity: 0.8;
-  width: 60%;
+  opacity: 0.9;
+  width: 50%;
   height:60%;
   position: absolute;
   top: 20%;
@@ -72,13 +73,146 @@ font-size: 20px;
 text-align: center;
 }
 
-#vistaConoceP p{
+#titulovistaConocer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
-  position: absolute;
+  /* position: absolute; */
   right: 20px;
 
 }
+
+#carateristicas {
+   height: 100%;
+   width: 100% ;
+   display: flex;
+   flex-direction: row;
+}
+
+#imgPokemon{
+  height: 80%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textImage{
+  color: #153262;
+}
+
+#ImgPok{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#atributo{
+  height: 80%;
+  width: 65%;  
+}
+
+#atributo2{
+  background-color:#4177A9;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  border-radius: 20px;
+}  
+#linea1{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#titulo{
+  color :white;
+  text-align: center;
+}
+#linea2{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+#altura{
+  width: 33.3%;
+  height: 100%;
+
+}
+#alturatitulo{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#alturavalor{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.altuValor{
+  color:#E0F8F7;
+  margin:0px
+}
+.tituloatributo{
+  color: #DEC02D;
+  margin: 0px;
+}
+#peso{
+  width: 33.3%;
+  height: 100%;
+}
+
+#multiplicador{
+  width: 33.3%;
+  height: 100%;
+}
+
+
+#linea3{
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: row;
+}
+
+#tipo{
+  width: 55%;
+  height: 100%;
+}
+
+#debilidades{
+  width: 45%;
+  height: 100%;
+}
+
+.tipotitulo{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tipovalor{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 
 footer{
   background: #C71616;
