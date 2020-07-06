@@ -2,117 +2,132 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Data Lovers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header> 
-      <img id="logo" src="img/logo.png" alt="">
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#" id="botonMenu2">Conoce tu pokémon</a></li>
-          <li><a href="#">Evoluciones</a></li>
-          <li><a href="#">Combate</a></li>
-          <!-- arregar id -->
-        </ul>
-     </nav>
-    </header>
-   
-    <div id="root">
-     
-      <div id="vistaPpal">
-        
-          <p>Bienvenido <br><br>
-            DESCUBRE EL MUNDO DE POKÉMON: <br><br>
-            Explora, descubre y atrapa nuevos Pokémon donde vayas,<br> haz que tu pokémon sea más fuerte<br> y compite en épicos combates de Gimnasio.<br><br>
-            ¡Es hora de ponerse en marcha! <br><br>
-            ¡Te esperan miles de aventuras!
+
+    <div class="padre">
+
+      <header> 
+
+        <div class="logo">
+          <img id="logo" src="img/logo.png" alt="logo_Pokémon">
+        </div>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="#" id="botonMenu1">Inicio</a></li>
+            <li><a href="#" id="botonMenu2">Conoce tu pokémon</a></li>
+            <li><a href="#" id="botonMenu3">Evoluciones</a></li>
+            <li><a href="#" id="botonMenu4">Combate</a></li>
             
-             ¡Let's GO!</p>
+          </ul>
+      </nav>
 
-      </div>
+      </header>
+    
+      <div id="root">
+
+        <div id="vistaPpal">
+          
+            <p><br>Bienvenido <br><br>
+              DESCUBRE EL MUNDO DE POKÉMON: <br><br>
+              Explora, descubre y atrapa nuevos Pokémon donde vayas,<br> haz que tu pokémon sea más fuerte<br> y compite en épicos combates de Gimnasio.<br><br>
+              ¡Es hora de ponerse en marcha! <br><br><br>
+              ¡Te esperan miles de aventuras!<br><br>
+              ¡Let's GO!</p>
+
+        </div>
 
 
-      <div id="vistaConoceP">
-        <p id="titulovistaConocer">Encuentra tu Pokémon por número o nombre</p>
-        <label for="">Número o Nombre</label>
-        <input type="text" id="numPokemon">
-        <button class="btn" id="boton">Mostrar</button>
-        <div id="carateristicas">
-          <div id="imgPokemon">
-            <img id="ImgPok"/>
-            <p class="textImage" id="textNumber"></p>
-            <p class="textImage" id="textName"></p>
+        <div id="vistaConoceP">
+          <p id="tituloVistaConocer">Encuentra tu Pokémon por número o nombre</p>
+          
+          <div class="buscarP">
+            <label for="">Número o Nombre</label>
+            <input type="text" id="numPokemon">
+            <button class="btn" id="boton">Buscar</button>
           </div>
-          <div id="atributo">
-            <div id= "atributo2">
-              <div id="linea1">
-                <h3 id="titulo"  >Características Únicas</h3>
+          
+          <div id="carateristicas">
+              <div id="imgPokemon">
+                <img id="imgPok"/>
+                <p class="textImage" id="textNumber"></p>
+                <p class="textImage" id="textName"></p>
               </div>
-              <div id="linea2">
-                <div id="altura"> 
-                  <div id="alturatitulo">
-                    <p class="tituloatributo">Altura</p>
-                  </div>
-                  <div id="alturavalor">
-                    <p class="altuValor" id="alturavalordata"></p>
-                  </div>
-                </div>
-                <div id="peso">
-                  <div id="alturatitulo">
-                    <p class="tituloatributo">Peso</p>
-                  </div>
-                  <div id="alturavalor">
-                    <p class="altuValor"  id="pesovalordata"></p>
-                  </div>
-                </div>
-                <div id="multiplicador">
-                  <div id="alturatitulo">
-                    <p class="tituloatributo">Multiplicador</p>
-                  </div>
-                  <div id="alturavalor">
-                    <p class="altuValor" id="multi1"></p>
-                    <p class="altuValor" id="multi2"></p>
-                  </div>
-                </div>
-              </div>
-              <div id="linea3">
-                <div id="tipo">
-                  <div class="tipotitulo">
-                    <p class="tituloatributo">Tipo</p>
-                  </div>
-                  <div class="tipovalor">
+              
 
-                  </div>
-                </div>
-                <div id="debilidades">
-                  <div class="tipotitulo">
-                    <p class="tituloatributo">Debilidades</p>
-                  </div>
-                  <div class="tipovalor">
+            <div id="detallePokemon">
+              <h3 class="line1DetalleP">Características Únicas</h3>
 
+              <div class="line2DetalleP">
+                  <div class="alturaPeso">
+
+                    <div class="height"> 
+                      <p class="tituloatributo">Altura</p>
+                      <p class="altuPesoValor" id="alturavalordata"></p>
+                    </div>
+
+                    <div class="weight">
+                        <p class="tituloatributo">Peso</p>
+                        <p class="altuPesoValor"  id="pesovalordata"></p>
+                    </div>
+                  </div>
+
+                  <div class="contenidoMultiplicador">
+                    <div class="titulosDetallesP">
+                      <p class="tituloatributo">Multiplicador</p>
+                    </div>
+                    <div id="multipliers"></div>  <!--  Se imprimen los valores de la data-->
                   </div>
                 </div>
+
+              <div class="line3DetalleP">
+                <div class="contenidoTypes">
+                    <div class="titulosDetallesP">
+                      <p class="tituloatributo">Tipo</p>
+                    </div>
+                    <div id="typePokemon"></div>
+                </div>
+
+                    <div class="contenidoDebilidades">
+                      <div class="titulosDetallesP">
+                      <p class="tituloatributo">Debilidades</p>
+                      </div>
+                      <div id="weaknesses"></div>
+                    </div>
+
               </div>
             </div>
-
-
           </div>
-        </div> 
+            </div>
+          </div> 
+            
           
-        
+
+        </div>
+
+        <div id="vistaEvoluciones">
+          <div>EN CONSTRUCCIÓN HISTORIA DE USUARIO 2 Evoluciones</div>
+        </div>
+
+
+        <div id="vistaCombate">
+          <div>EN CONSTRUCCIÓN HISTORIA DE USUARIO 3 Combates</div>
+        </div>
+
 
       </div>
 
+      <footer> 
+        <p>Autoras: Karla Guaita - Marcela Coronel</p> 
+        <p>2020</p>
+      </footer>
+
     </div>
-
-    <footer> 
-      <p>Autoras: Karla Guaita - Marcela Coronel</p> 
-      <p>2020</p>
-     </footer>
-
-
 
     <script src="main.js" type="module"></script>
   </body>
