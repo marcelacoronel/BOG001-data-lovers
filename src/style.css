@@ -203,15 +203,6 @@ header{
   
 }
 
-/* .tituloatributo{
-  flex: 0 1 20%;
- 
-}
-.altuPesoValor{
-  flex: 0 1 80%;
-  
-} */
-
 .contenidoMultiplicador{
   /* border: 5px solid rgb(21, 193, 216); */
   display: flex;
@@ -224,9 +215,12 @@ header{
 #multipliers{
   /* border: 5px solid rgb(21, 193, 216); */
   display: flex;
-  flex-flow: column nowrap;
-  flex: 0 1 80%;
+  flex-flow: row nowrap;
+  flex: 0 1 auto;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -237,6 +231,8 @@ header{
   flex: 1 1 50%;
   align-items: center;
   align-content: flex-start;
+  width: 100%;
+  height: 120px;
 }
 
 #typePokemon{
@@ -257,7 +253,7 @@ header{
   flex: 1 1 50%;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 120px;
   align-content: flex-start;
 }
 
@@ -269,8 +265,7 @@ header{
   align-items:center;
   width: 100%;
   height: 100%;
-  align-content:space-between;
-  justify-content: space-between;
+  justify-content: space-around;
   
 }
 
@@ -279,19 +274,12 @@ header{
       display: flex;
       justify-content: center;
       flex: 0 1 35%;
-      
-      
-
     }
-
-    
 
     .tituloatributo, .line1DetalleP{
       font-weight: bolder;
       color: #153262;
     }
-
-    
 
     #weaknesses, #typePokemon, #multipliers, .altuPesoValor{
       font-size: 0.875em;
@@ -304,6 +292,8 @@ footer{
   display: flex;
   justify-content: center;
   color: white;
+  height: 25px;
+  width: 100%;
   /* position: absolute; */
 }
 
