@@ -40,6 +40,18 @@ else{
 
 }
 
+function verMenu(){
+if(contador==1){
+  listaMenu.style.display = 'block';
+  contador=0;
+}
+else{
+  listaMenu.style.display = 'none';
+  contador=1
+}
+
+}
+
 function inicio(){
   document.getElementById('vistaPpal').style.display='block';
   document.getElementById('vistaConoceP').style.display='none';
@@ -78,6 +90,7 @@ console.log(arregloData.id);
  // class="numPokemon">
   // class="imgPokemon">
   // class="namePokemon"
+
 }
 
 function combate(){
@@ -102,9 +115,13 @@ nombreNumeroPokemon.addEventListener("keyup", function(event) {
   });
 
 function llenarFrontPokemon(valor){
-  const arreglo=data.pokemon;
+
+
   const pokemon = buscarPokemon(valor,arreglo)
-  document.getElementById('carateristicas').style.display='block';
+//   document.getElementById('carateristicas').style.display='block';
+
+  document.getElementById('carateristicas').style.display='flex';
+
   if (!pokemon)
   {
     alert('No se encontro el pokemon')
