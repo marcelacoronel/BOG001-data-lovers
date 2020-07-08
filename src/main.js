@@ -6,26 +6,46 @@ import data from './data/pokemon/pokemon.js';
 
 
 //declaracion de la variable
-let nombreNumeroPokemon = document.getElementById('numPokemon')
+let nombreNumeroPokemon = document.getElementById('numPokemon');
+let contador=1;
+
 //declaracion del evento
 document.getElementById('boton').addEventListener('click',function(){llenarFrontPokemon(nombreNumeroPokemon.value)});
 document.getElementById('vistaConoceP').style.display='none';
 document.getElementById('carateristicas').style.display='none';
+document.getElementById('vistaEvoluciones').style.display='none';
 
 
+const menuNav = document.getElementsByClassName('menu-bar')[0];
+const listaMenu= document.getElementsByClassName('menu')[0];
+listaMenu.style.display = 'none';
+
+menuNav.addEventListener("click", verMenu);
 
 document.getElementById('botonMenu1').addEventListener('click', inicio);
 document.getElementById('botonMenu2').addEventListener('click', conocerP);
 document.getElementById('botonMenu3').addEventListener('click', evoluciones);
 document.getElementById('botonMenu4').addEventListener('click', combate);
 
-// completar los botones y su id?///
+
+function verMenu(){
+if(contador==1){
+  listaMenu.style.display = 'block';
+  contador=0;
+}
+else{
+  listaMenu.style.display = 'none';
+  contador=1
+}
+
+}
 
 function inicio(){
   document.getElementById('vistaPpal').style.display='block';
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='none';
   document.getElementById('vistaCombate').style.display='none';
+  listaMenu.style.display = 'none';
 }
 
 function conocerP(){
@@ -34,6 +54,7 @@ function conocerP(){
   document.getElementById('vistaConoceP').style.display='block';
   document.getElementById('vistaEvoluciones').style.display='none';
   document.getElementById('vistaCombate').style.display='none';
+  listaMenu.style.display = 'none';
   //document.getmen completra???
 }
 
@@ -42,6 +63,21 @@ function evoluciones(){
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='block';
   document.getElementById('vistaCombate').style.display='none';
+  listaMenu.style.display = 'none';
+
+  //---IMPRIMIR LISTA DE TODOS LOS POKEMON EN PANTALLA
+  const arregloData=data.pokemon;
+  // const verTodos=buscarTodos(arregloData);
+console.log(arregloData.id);
+
+//     arregloData.num.forEach(elemento=> {
+//     let imprimirNum=document.createElement("p")
+//     imprimirNum.innerHTML=elemento;
+//     document.getElementById('numPokemon').appendChild(imprimirNum);
+// }
+ // class="numPokemon">
+  // class="imgPokemon">
+  // class="namePokemon"
 }
 
 function combate(){
@@ -49,6 +85,7 @@ function combate(){
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='none';
   document.getElementById('vistaCombate').style.display='block';
+  listaMenu.style.display = 'none';
 }
 
 
@@ -65,7 +102,8 @@ nombreNumeroPokemon.addEventListener("keyup", function(event) {
   });
 
 function llenarFrontPokemon(valor){
-  const pokemon = buscarPokemon(valor,data)
+  const arreglo=data.pokemon;
+  const pokemon = buscarPokemon(valor,arreglo)
   document.getElementById('carateristicas').style.display='block';
   if (!pokemon)
   {
@@ -119,7 +157,6 @@ function llenarFrontPokemon(valor){
 
 
 
-
           //-------------- PRIMERA FORMA REALIZADA PARA IMPRIMIR VARIOS VALORES DE UN ARREGLO
     // if (pokemon.multipliers != null)
     // {
@@ -136,8 +173,10 @@ function llenarFrontPokemon(valor){
     // }
 
     
-    console.log(pokemon)
+    // console.log(pokemon)
 }
+
+
 
 
 
