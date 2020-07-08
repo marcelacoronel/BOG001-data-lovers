@@ -209,6 +209,32 @@ header{
   border-radius: 4px;
   outline: none;
   }
+  .btn{
+    font-size:1em;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color:#051948;
+    color: white;
+    background: #eb94d0;
+    /* Crear degradados */
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+   /* Dar bordes curvados a btn */
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+   text-shadow: 3px 2px 1px #9daef5;
+   -webkit-box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #666666;
+    box-shadow: 6px 5px 24px #666666;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+  
 
 #carateristicas{
   /* border: 5px solid rgb(221, 23, 181); */
@@ -272,7 +298,7 @@ header{
 }
 
 
-.weight, .height{
+.weight, .height{ 
   /* border: 5px solid rgb(216, 83, 21); */
   display: flex;
   flex-flow: column wrap;
@@ -383,12 +409,128 @@ footer p{
 /* MEDIA QUERIES */
 
 /* -------TABLETS MAX 768 */
-@media screen and (max-width:768px){
+@media screen  and (min-device-width: 600px) and (max-width:780px){
   .logo img{
     /* border: 5px solid rgb(8, 236, 38); */
-    max-width: 100%;
+    max-width: 100px;
     height: auto;
-    }
+  }
+  .padre{
+    height: 1024px; 
+  }
+  #vistaPpal p{
+    font-size: 30px;
+  }
+  .btn{
+    font-size:1.6em;
+  }
+  .line1DetalleP{
+    font-size: 30px;
+  }
+  .line2DetalleP, .line3DetalleP{
+    font-size: 30px;
+  }
+
+
+    
+  footer{
+   height: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  
+  footer p{
+  font-size: 16px;
+    
+  }
+  #tituloVistaConocer{
+  font-size: 1.5em;
+  }
+  .buscarP{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+
+  }
+  .buscarP label {
+  font-size:1.5em ;
+  }
+  .buscarP input{
+  font-size: 1.3em;
+  text-align: center;
+
+  }
+  .contenidoDebilidades{
+    height:200px;
+  }
+
+}
+/*  table ipad pro */
+@media screen  and (min-device-width: 780px) and (max-width:1025px){
+ 
+  .logo img{
+    /* border: 5px solid rgb(8, 236, 38); */
+    max-width: 100px;
+    height: auto;
+  }
+  .padre{
+    height: 1366px; 
+  }
+  #vistaPpal p{
+    font-size: 40px;
+  }
+  .btn{
+    font-size:1.6em;
+  }
+  .line1DetalleP{
+    font-size: 40px;
+  }
+  .line2DetalleP, .line3DetalleP{
+    font-size: 30px;
+  }
+
+
+    
+  footer{
+   height: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  
+  footer p{
+  font-size: 16px;
+    
+  }
+  #tituloVistaConocer{
+  font-size: 1.5em;
+  }
+  .buscarP{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+
+  }
+  .buscarP label {
+  font-size:1.5em ;
+  }
+  .buscarP input{
+  font-size: 1.3em;
+  text-align: center;
+
+  }
+  .contenidoDebilidades{
+    height:200px;
+  }
+  #tituloVistaConocer{
+    font-size: 2em;
+  }
+
 }
 
 
@@ -403,6 +545,7 @@ footer p{
       width: 35%;
       height: auto;
       }
+
 
 
 #imgPokemon{
