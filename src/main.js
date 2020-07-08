@@ -66,7 +66,7 @@ nombreNumeroPokemon.addEventListener("keyup", function(event) {
 
 function llenarFrontPokemon(valor){
   const pokemon = buscarPokemon(valor,data)
-  document.getElementById('carateristicas').style.display='block';
+  document.getElementById('carateristicas').style.display='flex';
   if (!pokemon)
   {
     alert('No se encontro el pokemon')

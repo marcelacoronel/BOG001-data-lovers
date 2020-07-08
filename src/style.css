@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,body{
+  /* margin:0px; */
+  height:100%; 
+}
 
 
 #vistaConoceP, #vistaEvoluciones, #vistaCombate {
@@ -107,7 +111,7 @@ header{
 }
 
 #tituloVistaConocer{
- 
+  font-weight: bold;
   font-size: 0.75em;
   color: #051948;
   border-radius: 1px solid #051948 ;
@@ -132,7 +136,7 @@ header{
   outline: none;
   }
   .btn{
-    font-size:1em;
+    font-size:0.8em;
     padding-left: 10%;
     padding-right: 10%;
     background-color:#051948;
@@ -152,8 +156,9 @@ header{
    -webkit-box-shadow: 6px 5px 24px #666666;
     -moz-box-shadow: 6px 5px 24px #666666;
     box-shadow: 6px 5px 24px #666666;
-    color: #fafafa;
+    color: blue;
     text-decoration: none;
+    
 }
 
   
@@ -391,6 +396,20 @@ footer p{
   }
 
 }
+
+
+#imgPokemon{
+ 
+  width: 35%;
+  height:40% ;
+ 
+}
+
+  #imgPok{
+  width: 50%;
+
+}
+
 /*  table ipad pro */
 @media screen  and (min-device-width: 780px) and (max-width:1025px){
  
@@ -399,6 +418,7 @@ footer p{
     max-width: 100px;
     height: auto;
   }
+  
   .padre{
     height: 1366px; 
   }
@@ -458,30 +478,84 @@ footer p{
 
 
 /* -------DESKTOP MAX 1200 Y 1600 */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) {
+@media screen and (min-device-width: 1025px) and (max-device-width: 1600px)
+ {
 
     .logo img{
       /* border: 5px solid rgb(8, 236, 38); */
-      /* max-width: 100%;     */
-      width: 35%;
+       max-width: 100px ;
       height: auto;
+    }
+    #imgPok{
+      width: 30%;
+    }
+      .padre {
+        height:100%;  
+        
+      }
+      #vistaPpal p{
+        font-size: 20px;
+      }
+      .btn{
+        font-size:1.6em;
+      }
+      .line1DetalleP{
+        font-size: 20px;
+      }
+      .line2DetalleP, .line3DetalleP{
+        font-size: 15px;
       }
 
+      #detallePokemon{
+        width: 60%;
+        height: 250px;
+      }
+
+      #weaknesses{
+        flex: 0 1 30%;
+      }
+    
+    
+        
+      footer{
+       height: 50px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+      }
+      
+      
+      footer p{
+      font-size: 16px;
+        
+      }
+      #tituloVistaConocer{
+      font-size: 1.5em;
+      }
+      .buscarP{
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+    
+      }
+      .buscarP label {
+      font-size:1.5em ;
+      }
+      .buscarP input{
+      font-size: 1.3em;
+      text-align: center;
+    
+      }
+      .contenidoDebilidades{
+        height:200px;
+      }
+      #tituloVistaConocer{
+        font-size: 2em;
+      }
+    }
+  
 
 
-#imgPokemon{
- 
-  width: 35%;
-  height:40% ;
- 
-}
 
-  #imgPok{
-  width: 50%;
-
-}
-
-}
 
