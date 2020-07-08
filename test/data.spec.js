@@ -8,11 +8,11 @@ describe('buscarPokemon', () => {
   });
 
   it('return pokemon ', () => {
-    expect(buscarPokemon()).toBe(pokemon);
+    expect(buscarPokemon(pokemon([])).toBe(pokemon));
   });
 
     it('Pikachu existe en el array', () => {
-        expect(buscarPokemon('25')).toContain('pikachu');
+        expect(buscarPokemon('25',pokemon)).toContain('25');
     });
     it('buscarPokemon retorna false para " "', () => {
         expect(buscarPokemon("")).toBe(false);
