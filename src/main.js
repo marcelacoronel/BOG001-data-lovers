@@ -77,6 +77,7 @@ function evoluciones(){
   document.getElementById('vistaCombate').style.display='none';
   listaMenu.style.display = 'none';
 
+
   //---IMPRIMIR LISTA DE TODOS LOS POKEMON EN PANTALLA
   const arregloData=data.pokemon;
   // const verTodos=buscarTodos(arregloData);
@@ -117,8 +118,14 @@ nombreNumeroPokemon.addEventListener("keyup", function(event) {
 function llenarFrontPokemon(valor){
 
 
+  const arreglo=data.pokemon;
   const pokemon = buscarPokemon(valor,arreglo)
 //   document.getElementById('carateristicas').style.display='block';
+
+ 
+
+
+  
 
   document.getElementById('carateristicas').style.display='flex';
 
