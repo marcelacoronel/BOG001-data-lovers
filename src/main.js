@@ -8,10 +8,13 @@ import data from './data/pokemon/pokemon.js';
 //declaracion de la variable
 let nombreNumeroPokemon = document.getElementById('numPokemon');
 let contador=1;
+
 //declaracion del evento
 document.getElementById('boton').addEventListener('click',function(){llenarFrontPokemon(nombreNumeroPokemon.value)});
 document.getElementById('vistaConoceP').style.display='none';
 document.getElementById('carateristicas').style.display='none';
+document.getElementById('vistaEvoluciones').style.display='none';
+
 
 const menuNav = document.getElementsByClassName('menu-bar')[0];
 const listaMenu= document.getElementsByClassName('menu')[0];
@@ -24,7 +27,18 @@ document.getElementById('botonMenu2').addEventListener('click', conocerP);
 document.getElementById('botonMenu3').addEventListener('click', evoluciones);
 document.getElementById('botonMenu4').addEventListener('click', combate);
 
-// completar los botones y su id?///
+
+function verMenu(){
+if(contador==1){
+  listaMenu.style.display = 'block';
+  contador=0;
+}
+else{
+  listaMenu.style.display = 'none';
+  contador=1
+}
+
+}
 
 function verMenu(){
 if(contador==1){
@@ -62,6 +76,21 @@ function evoluciones(){
   document.getElementById('vistaEvoluciones').style.display='block';
   document.getElementById('vistaCombate').style.display='none';
   listaMenu.style.display = 'none';
+
+  //---IMPRIMIR LISTA DE TODOS LOS POKEMON EN PANTALLA
+  const arregloData=data.pokemon;
+  // const verTodos=buscarTodos(arregloData);
+console.log(arregloData.id);
+
+//     arregloData.num.forEach(elemento=> {
+//     let imprimirNum=document.createElement("p")
+//     imprimirNum.innerHTML=elemento;
+//     document.getElementById('numPokemon').appendChild(imprimirNum);
+// }
+ // class="numPokemon">
+  // class="imgPokemon">
+  // class="namePokemon"
+
 }
 
 function combate(){
@@ -86,8 +115,13 @@ nombreNumeroPokemon.addEventListener("keyup", function(event) {
   });
 
 function llenarFrontPokemon(valor){
-  const pokemon = buscarPokemon(valor,data)
+
+
+  const pokemon = buscarPokemon(valor,arreglo)
+//   document.getElementById('carateristicas').style.display='block';
+
   document.getElementById('carateristicas').style.display='flex';
+
   if (!pokemon)
   {
     alert('No se encontro el pokemon')
@@ -140,7 +174,6 @@ function llenarFrontPokemon(valor){
 
 
 
-
           //-------------- PRIMERA FORMA REALIZADA PARA IMPRIMIR VARIOS VALORES DE UN ARREGLO
     // if (pokemon.multipliers != null)
     // {
@@ -157,8 +190,10 @@ function llenarFrontPokemon(valor){
     // }
 
     
-    console.log(pokemon)
+    // console.log(pokemon)
 }
+
+
 
 
 
