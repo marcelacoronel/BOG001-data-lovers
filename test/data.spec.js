@@ -1,6 +1,7 @@
 import { buscarPokemon } from '../src/data.js';
 import pokemon from '../src/data/pokemon/pokemon.js';
 
+const arreglo =pokemon;
 
 describe('buscarPokemon', () => {
   it('is a function', () => {
@@ -8,15 +9,16 @@ describe('buscarPokemon', () => {
   });
 
   it('return pokemon ', () => {
-    expect(buscarPokemon(pokemon([])).toBe(pokemon));
+    expect(buscarPokemon(pokemon).toBe(true));
   });
 
-    it('Pikachu existe en el array', () => {
-        expect(buscarPokemon('25',pokemon)).toContain('25');
-    });
-    it('buscarPokemon retorna false para " "', () => {
-        expect(buscarPokemon("")).toBe(false);
-    });
+  it.only('25 existe en el array', () => {
+      expect(buscarPokemon("25",arreglo)).toBe('25');
+  });
+  
+  it('buscarPokemon retorna false para " "', () => {
+      expect(buscarPokemon("")).toBe(false);
+  });
 });
 
 
