@@ -20,10 +20,8 @@
         <div class="logo">
           <img id="logo" src="img/logo.png" alt="logo_Pokémon">
         </div>
-
         
-        
-        <nav class="menu">
+        <nav id="menu" class="disableMenu">
           <ul>
             <li><a href="#" id="botonMenu1">Inicio</a></li>
             <li><a href="#" id="botonMenu2">Conoce tu pokémon</a></li>
@@ -33,10 +31,10 @@
           </ul>
           
       </nav>
-      <div class="menu-bar">
-        <a href="#" class="boton-menu"> <span class="icon-menu"></span></a>
-      </div>
-      
+      <button id="btnMenuNav" style="font-size:24px"><i class="fas fa-bars"></i></button>
+      <!-- <div id="btnMenuNav">
+        <a href="#" class="fas fa-bars"></a>
+      </div> -->
 
       </header>
     
@@ -72,6 +70,7 @@
               
 
             <div id="detallePokemon">
+              
               <h3 class="line1DetalleP">Características Únicas</h3>
 
               <div class="line2DetalleP">
@@ -113,25 +112,63 @@
 
               </div>
             </div>
+            <button id="btnCloseFeaturesPok" class="btnCerrar"><i class='far fa-window-close'></i></button>
           </div>
+         
             </div>
-          </div> 
+          
             
           <div id="vistaEvoluciones">
-            <p> En construcción historia usuario 2 Evoluciones</p>
-            <div class="listaPokemon">
-              <div class="numPokemon"> </div>
-              <div class="imgPokemon"></div>
-              <div class="namePokemon"></div>
+            <div class="ordPokemon">
+              <label for="ordenarPk">Ordenar por nombre</label>
+              <button id="ordenarPk" class="ordenar"><i class='fas fa-sort-alpha-down'></i></button>
+            </div>
+            
+            <div id="listaPokemon">
             </div>
           </div>
+
+            <div id="vistaDetalleEvoluciones">
+              <h3>Evoluciones</h3>
+              <div id="containerEvoluciones">
+                
+                <div id="contenedorActual">
+                  <h3>Pokémon Seleccionado</h3>
+                  <div id="actualPokemon">
+                  </div>
+                </div>
+
+                <div id="containerPrev">
+                  <h3>Pre-Evolution</h3>
+                  <div id="prevEvolution">
+                  </div>
+                </div>
+
+                <div id="containerNext">
+                  <h3>Next Evolution</h3>
+                  <div id="nextEvolution">
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div id="containerCandy">
+                <h3>Requisitos Candies Evolución</h3>   
+              <div id="candyEvolution">
+                             
+              </div>
+            </div>
+              
+              <button id="backEvolution" class="btnCerrar"><i class='far fa-window-close'></i></button>
+            </div>
   
   
           <div id="vistaCombate">
             <p> EN CONSTRUCCIÓN HISTORIA DE USUARIO 3 combates</p>
           </div>
   
-  
+        </div> 
+
         <footer> 
           <p>Autoras: Karla Guaita - Marcela Coronel</p> 
           <p>2020</p>
@@ -143,5 +180,6 @@
 
 
     <script src="main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </body>
 </html>
