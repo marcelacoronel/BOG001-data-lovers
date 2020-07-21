@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
-  /* margin:0px; */
+
+html, body{
   height:100%; 
 }
 
 
-#vistaConoceP, #vistaEvoluciones, #vistaCombate {
+#vistaConoceP, #vistaEvoluciones, #vistaDetalleEvoluciones, #vistaCombate {
   display: none;
   height: 100%;
 }
@@ -23,10 +23,12 @@ body{
   /* background: 5px solid rgb(45, 13, 77); */
   background-image: url("img/fondo1.jpg");
   background-position: center;
+
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: 645px;
+  /* height: 645px; */
+  height: 100%;
   align-items: center;
 }
 
@@ -38,128 +40,106 @@ header{
   align-items: center;
   height: 4.375em;
   width: 100%;
-  
-  
 }
 
   .logo{
     /* border: 5px solid rgb(40, 228, 56); */
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
-    flex: 0 1 30%;
     align-items: center;
   }
 
   .logo img{
     /* border: 5px solid rgb(193, 228, 40); */
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     }
 
-    .menu-bar{
-      /* border: 3px solid rgb(236, 133, 14); */
-    height: 100%;
-    width: 0;
-    flex: 0 1 70%;
-    align-items: center;
-   /* position: relative; */
-    /* z-index: 1; */
-    top: 0;
-    left: 0;
-    /* background-color: rgb(5, 44, 95); */
-    /* background-color: rgba(5, 44, 95, 0.9); */
-    overflow-x: hidden;
-    transition: 0.5s;
-   
+    #btnMenuNav{
+    /* border: 3px solid rgb(236, 133, 14); */
+    width: 60%;
+    margin-right: 10px;
     }
 
-    .menu-bar .boton-menu{
+   
+   #btnMenuNav i{
       /* border: 3px solid rgb(228, 40, 40); */
-      display: block;
       width: 100%;
       height: 100%;
       padding: 1px;
       color: white;
-      /* background: #051948 ; */
-      font-size: 25px;
+      background: #051948 ; 
+      font-size: 30px;
       align-items: center;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-x: hidden;
-      transition: 0.5s;
-
     }
 
-    .menu-bar span{
-      float: right;
-      font-size: 60px;
-    }
-
-    .menu-bar a:hover {
-      color: #f1f1f1;
-  }
-
-  .menu{
-    /* border: 2px solid rgb(139, 133, 133); */
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 2 1 0;
-    position: relative;
-    width: 50%;
+  #menu{
+    /* border: 2px solid rgb(16, 212, 16); */
+    width: 250%;
+    height: 600px;
     text-align: center;
-    margin: 30px auto;
+    transform: translateY(270px);
     z-index: 1;
     text-align: center;
+   
   }
-    ul{
+
+  
+   nav ul{
       /* border: 2px solid rgb(163, 18, 182); */
-      width: 70%;
-      position:fixed;
-      /* position: relative; */
-      height: 100%;
+      width: 100%;
+      height: 80%;
       background: #051948;
-      top: 70px;
-      margin-right: 30px;
-      overflow: hidden;
+      flex-flow: column nowrap;
+      transform: translateY(60px);
+
     }
-      li{
-        margin: 0;
+      nav li{
+        margin: 5px;
         list-style: none;
         display: block;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        width: 100%;
-        
-        
+        /* border: 5px solid rgb(196, 193, 38); */
       }
 
       nav ul li a{
           /* border: 5px solid rgb(196, 38, 170); */
           color: white;
           text-decoration: none;
-          display: block;
+          display:block;
           transition: 0.3s;
-          margin: 10px 0;
+          margin: 5px 0;
           padding: 20px;
           width: 100%;
         }
 
-        nav ul li a:hover {
+        nav ul li a:hover, a:focus{
           background-color: #DEC02D; 
           color: #fff;
         }
 
+
+        .enableMenu{
+          /* display: block; */
+          visibility: visible;
+         
+        }
+        .disableMenu{
+          /* display: none; */
+          visibility: hidden;
+         
+        }
 #root{
   /* border: 5px solid rgb(29, 29, 27); */
-  height: 90%;
-  width: 90%;
+  height: 98%;
+  width: 98%;
   border-radius: 2em;
   opacity: 0.8;
   background: #ECF2F4;
   padding: 0.625em;
   margin: 0.625em;
   border: 1px solid #4177A9;
-  position: relative;
+  /* position: relative; */
 }
 
 #vistaPpal{
@@ -189,34 +169,44 @@ header{
 
 #tituloVistaConocer{
   font-weight: bold;
-  font-size: 0.75em;
+  font-size: 14px;
   color: #051948;
   border-radius: 1px solid #051948 ;
   text-align: center;
 }
 
 .buscarP{
-  /* border: 5px solid rgb(0, 17, 255); */
+  /* border: 2px solid rgb(0, 17, 255); */
   color: #051948;
-  font-size: 0.875em;
+  font-size: 14px;
   display: flex;
   flex-flow: row nowrap;
   align-items: baseline;
-  margin: 10px;
+  margin: 0.625em;
+  font-weight: bold;
+  justify-content: center;
+
 }
 
+.buscarP label {
+  margin-right: 5px;
+  }
+
 #numPokemon{
-  margin: 0 5px 5px 5px;
+  margin: 5px 5px 5px 2px;
   padding: 0 5px;
-  width: 30%;
+  width: 20%;
   border: 1px solid #051948;
   border-radius: 4px;
-  outline: none;
+  /* outline: none; */
   }
+
   .btn{
-    font-size:0.8em;
-    padding-left: 10%;
-    padding-right: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    /* font-size:  0.8em; */
+    padding-left: 5%;
+    padding-right: 5%;
     background-color:#051948;
     color: white;
     background: #eb94d0;
@@ -235,41 +225,43 @@ header{
     -moz-box-shadow: 6px 5px 24px #666666;
     box-shadow: 6px 5px 24px #666666;
     font-weight: bold;
-    color: blue;
+    color: rgb(10, 10, 54);
     text-decoration: none;
+    justify-content: center;
     
 }
-
-  
 
 #carateristicas{
   /* border: 5px solid rgb(221, 23, 181); */
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
 #imgPokemon{
   /* border: 5px solid rgb(23, 92, 221); */
-  width: 100%;
+  width:100%;
   height:auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: 2px 0;
   font-weight: bold;
+  font-size: 16px;
   
 }
 
 #imgPok{
-  width: 40%;
-  height: auto  ;
-
+  /* border: 5px solid rgb(46, 221, 23); */
+  width: 30%;
+  /* height: auto; */
 }
 
 #detallePokemon{
-  /* border: 5px solid rgb(216, 125, 21); */
+  /* border: 10px solid rgb(21, 216, 47); */
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -375,7 +367,7 @@ header{
   flex: 0 1 auto;
   align-items:flex-start;
   width: 100%;
-  height: 100%;
+  height: auto;
   justify-content: space-around;
   
 }
@@ -390,23 +382,181 @@ header{
     .tituloatributo, .line1DetalleP{
       font-weight: bolder;
       color: #153262;
+      font-size: 16px;
     }
 
     #weaknesses, #typePokemon, #multipliers, .altuPesoValor{
-      font-size: 0.875em;
+      font-size: 16px;
       color:#834A49; 
       font-weight: bold;
     }
 
 #vistaEvoluciones{
-  display: flex;
-  flex-flow: row wrap;
-  /* align-items: center; */
   color: #051948;
-  padding: 10px 10px;
+  padding: 4px 4px;
   width: 100%;
   height: 100%;
-  /* justify-content: center; */
+  justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.ordPokemon{
+  border: 5px #051948;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* font-weight: bold; */
+  text-align: center;
+  background-color: #0d5c94;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  
+  
+}
+.ordenar{
+color: #051948;
+font-size:30px;
+margin: 0 5px;
+}
+
+#listaPokemon{
+  /* border:3px solid rgb(162, 17, 206); */
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: center;
+  /* scroll-behavior: smooth; */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+
+#listaPokemon::-webkit-scrollbar{
+  width: 10px;
+}
+
+#listaPokemon::-webkit-scrollbar-thumb{
+  background: #051948;
+  border-radius: 5px;
+} 
+
+.boxPokemon{
+  border:3px solid #0d5c94;
+  border-radius: 20px;
+  background-color: #ECF2F4;
+  margin:2px 2px;
+  width: 160px;
+  height: 200px;
+}
+
+.boxPokemon p{
+  /* border:3px solid rgb(252, 185, 0); */
+  margin: 0;
+  font-weight: bold;
+
+}
+
+
+
+.boxPokemon img{
+  border:3px solid rgba(0, 231, 252, 0.123);
+  border-radius: 40px;
+  background-color:  rgba(0, 231, 252, 0.123);
+  
+}
+
+.boxPokemon h3{
+  border:3px solid rgb(216, 195, 8);
+ 
+  background-color: #f5c400;
+  border-radius: 20px;
+  margin: 0;
+  font-size: 16px;
+}
+
+#vistaEvoluciones{
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+#vistaDetalleEvoluciones{
+  /* border:3px solid rgb(216, 8, 216); */
+  flex-flow: column nowrap;
+  padding: 5px;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  
+}
+
+#containerEvoluciones{
+/* border:3px solid rgb(216, 22, 8); */
+display: flex;
+flex-flow: row wrap;
+width: auto;
+height: auto;
+text-align: center;
+justify-content: center;
+align-items: baseline;
+border:3px solid#051948;
+border-radius: 20px;
+font-size: 14px;
+font-weight: bold;
+padding: 4px;
+margin: 4px;
+}
+
+#containerEvoluciones img{
+  border:3px solid rgba(0, 252, 13, 0.123);
+  border-radius: 40px;
+  background-color: rgba(0, 231, 252, 0.123);
+}
+
+#containerEvoluciones h3 {
+  background-color: #f5c400;
+  font-size: 14px;
+  border:3px solid rgb(216, 195, 8);
+  border-radius: 20px;
+}
+
+
+#actualPokemon{
+  /* border:3px solid rgb(216, 202, 8); */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  padding: 4px;
+  /* width: 150px;
+  height: 200px; */
+
+}
+
+
+#containerPrev, #containerNext{
+  /* border:3px solid rgb(216, 8, 171); */
+  flex-flow: column nowrap;
+  margin: 0 5px;
+
+}
+
+#prevEvolution, #nextEvolution{
+  /* border:3px solid rgb(11, 8, 216); */
+  display: flex;
+  flex-flow:row wrap;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
 }
 #fondocombate1{
   background-image:url("img/arenacombate\ 3.png");
@@ -566,6 +716,35 @@ header{
 
 
 
+.boxPrev, .boxNext{
+  /* border:3px solid rgb(213, 216, 8); */
+  margin: 4px;
+  padding: 4px;
+ 
+}
+
+
+#candyEvolution{
+ border: 2px solid #051948;
+ border-radius: 20px;
+ width: 100%;
+ height: auto;
+ margin: 5px;
+ padding: 5px;
+ font-size: 14px;
+ font-weight: bold;
+ color:white;
+ background-color: #4177A9;
+}
+
+.btnCerrar{
+  border: 2px #051948;
+  font-size:30px;
+  color: #051948;
+}
+
+
+
 footer{
   background: #051948;
   display: flex;
@@ -595,17 +774,44 @@ footer p{
   .padre{
     height: 1024px; 
   }
+
+  #menu{
+  /* border: 5px solid rgb(8, 236, 38); */
+  height: 950px;
+  transform: translateY(450px);
+  }
+
+  nav ul{
+    /* border: 5px solid rgb(171, 8, 236); */
+    height: 90%;
+    margin-top: 0;
+    transform: translateY(50px);
+
+    }
+    nav a{
+      font-size: 24px;
+      }
+
+      #btnMenuNav{
+        width: 40%;
+      }
+      #btnMenuNav i{
+        
+        font-size: 50px;
+      }
+
+
   #vistaPpal p{
-    font-size: 30px;
+    font-size: 20px;
   }
   .btn{
-    font-size:1.6em;
+    font-size: 16px;
   }
   .line1DetalleP{
-    font-size: 30px;
+    font-size: 18px;
   }
   .line2DetalleP, .line3DetalleP{
-    font-size: 30px;
+    font-size: 16px;
   }
   #fondocombate1{
     background-image:url("img/arenacombate\ 3.png");
@@ -679,16 +885,18 @@ footer p{
     
   }
   #tituloVistaConocer{
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
+    font-size: 16px;
   }
   .buscarP{
-    font-size: 1em;
+    font-size: 16px;
     display: flex;
     justify-content: center;
 
   }
   .buscarP label {
-   font-size:1.5em ;
+   /* font-size:1.5em ; */
+    font-size: 16px;
   }
   .buscarP input{
     font-size: 1.3em;
@@ -698,22 +906,19 @@ footer p{
   .contenidoDebilidades{
     height:200px;
   }
-}
 
-
-
-
-#imgPokemon{
- 
-  width: 35%;
-  height:40% ;
- 
-}
-
+  #imgPokemon{
+    width: 35%;
+    height:40% ;
+    width: 100%;
+    height:auto;
+  }
   #imgPok{
-  width: 50%;
-
+    width: 30%;
+  }
 }
+
+
 
 
 
@@ -726,20 +931,48 @@ footer p{
     height: auto;
   }
   
+  #menu{
+    /* border: 5px solid rgb(8, 236, 38); */
+    height: 1250px;
+    transform: translateY(600px);
+    }
+  
+    nav ul{
+      /* border: 5px solid rgb(171, 8, 236); */
+      height: 90%;
+      margin-top: 0;
+      transform: translateY(50px);
+  
+      }
+      nav a{
+        font-size: 24px;
+        }
+  
+        #btnMenuNav{
+          width: 40%;
+        }
+        #btnMenuNav i{
+          
+          font-size: 40px;
+        }
+
+
+
   .padre{
     height: 1366px; 
   }
   #vistaPpal p{
-    font-size: 40px;
+    font-size: 25px;
   }
   .btn{
-    font-size:1.6em;
+    font-size: 16px;
   }
   .line1DetalleP{
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 18px;
   }
   .line2DetalleP, .line3DetalleP{
-    font-size: 30px;
+    font-size: 16px;
   }
   #fondocombate1{
     background-image:url("img/arenacombate\ 3.png");
@@ -821,7 +1054,7 @@ footer p{
 
   }
   .buscarP label {
-  font-size:1.5em ;
+  font-size: 16px;
   }
   .buscarP input{
   font-size: 1.3em;
@@ -832,7 +1065,7 @@ footer p{
     height:200px;
   }
   #tituloVistaConocer{
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -844,6 +1077,7 @@ footer p{
   and (min-device-width: 1025px) and (max-device-width: 1600px) and (max-device-width: 1600px){
 
 
+
     #vistaPpal{
     font-size: 16px;
     }
@@ -851,40 +1085,96 @@ footer p{
     opacity: 10;
   }
 
-
     .logo img{
       /* border: 5px solid rgb(8, 236, 38); */
-       max-width: 100px ;
+      max-width: 100px ;
       height: auto;
     }
-    #imgPok{
-      width: 30%;
+
+    #menu{
+      /* border: 5px solid rgb(8, 236, 38); */
+      width: 100%;
+      height: 80px;
+      transform: translateY(0);
+      }
+
+      #btnMenuNav{
+        visibility: hidden;
+        }
+    
+      .enableMenu{
+     
+        visibility: visible;
+       
+      }
+      .disableMenu{
+  
+        visibility: visible;
+      }
+
+    
+      nav ul{
+        /* border: 5px solid rgb(171, 8, 236); */
+        height: 90%;
+        margin: 0;
+        padding: 0;
+        transform: translateY(0);
+        }
+
+        nav ul li{
+          display: inline-block;
+          justify-content: right;
+        }
+
+        nav a{
+          font-size: 20px;
+          display: block;
+          }
+    
+          #btnMenuNav{
+            width: 20%;
+          }
+          #btnMenuNav i{
+            
+            font-size: 40px;
+          }
+
+
+    #caracteristicas{
+      flex-flow: row nowrap;
     }
+   
       .padre {
         height:100%;  
         
       }
+    
       #vistaPpal p{
         font-size: 20px;
       }
       .btn{
-        font-size:1.6em;
+        font-size:1.5em;
       }
+
+      #detallePokemon{
+        flex: 0 1 60%;
+        width: 50%;
+        /* height: 250px; */
+      }
+      #imgPokemon{
+        flex: 0 1 40%;
+        width: 50%;
+      }
+
+      #imgPok{
+        width: 40%;
+      }
+      
       .line1DetalleP{
         font-size: 20px;
       }
       .line2DetalleP, .line3DetalleP{
-        font-size: 15px;
-      }
-
-      .btn{
-        font-size:16px;
-        /* width: 5%; */
-      }
-
-      #detallePokemon{
-        width: 60%;
-        height: 250px;
+        font-size: 16px;
       }
 
       #weaknesses{
@@ -986,11 +1276,11 @@ footer p{
       }
         
       footer{
-       height: 50px;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       
       
@@ -1000,7 +1290,7 @@ footer p{
       }
   
       #tituloVistaConocer{
-      font-size: 1.5em;
+      font-size: 16px;
       }
       .buscarP{
         font-size: 1em;
@@ -1009,7 +1299,7 @@ footer p{
     
       }
       .buscarP label {
-      font-size:1.5em ;
+      font-size: 16px;
       }
       .buscarP input{
       font-size: 1.3em;
@@ -1017,10 +1307,11 @@ footer p{
     
       }
       .contenidoDebilidades{
-        height:200px;
+        height:auto;
       }
-      #tituloVistaConocer{
-        font-size: 2em;
+      
+      .btn{
+        font-size: 16px;
       }
 
       /* combate */
