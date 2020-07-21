@@ -1,4 +1,4 @@
-import { buscarPokemon, detalleEvoluciones } from './data.js';
+import { buscarPokemon, detalleEvoluciones, candyPokemon, ordenarPokemon } from './data.js';
 // import { verDatos } from './data.js'
 
 // import data from './data/pokemon/pokemon.js'
@@ -7,7 +7,8 @@ import data from './data/pokemon/pokemon.js';
 
 //declaracion de la variable
 let nombreNumeroPokemon = document.getElementById('numPokemon');
-let contador=1;
+
+const arregloData=data.pokemon;
 
 //declaracion del evento
 document.getElementById('boton').addEventListener('click',function(){llenarFrontPokemon(nombreNumeroPokemon.value)});
@@ -16,11 +17,8 @@ document.getElementById('carateristicas').style.display='none';
 document.getElementById('vistaEvoluciones').style.display='none';
 
 
-const menuNav = document.getElementsByClassName('menu-bar')[0];
-const listaMenu= document.getElementsByClassName('menu')[0];
-listaMenu.style.display = 'none';
-
-menuNav.addEventListener("click", verMenu);
+const botonNav = document.getElementById('btnMenuNav');
+botonNav.addEventListener('click', showMenu);
 
 document.getElementById('botonMenu1').addEventListener('click', inicio);
 document.getElementById('botonMenu2').addEventListener('click', conocerP);
@@ -28,34 +26,58 @@ document.getElementById('botonMenu3').addEventListener('click', evoluciones);
 document.getElementById('botonMenu4').addEventListener('click', combate);
 
 
-function verMenu(){
-if(contador==1){
-  listaMenu.style.display = 'block';
-  contador=0;
+document.getElementById('backEvolution').addEventListener('click', regresarEvolution);
+document.getElementById('ordenarPk').addEventListener('click', ordenarLista);
+document.getElementById('btnCloseFeaturesPok').addEventListener('click', cerrarCaracteristicasPokemon);
+
+
+
+function showMenu(){
+let menu=document.getElementById('menu');
+if(menu.classList.contains("disableMenu")){
+  menu.classList.remove("disableMenu");
+  menu.classList.add("enableMenu");
 }
 else{
-  listaMenu.style.display = 'none';
-  contador=1;
+  menu.classList.remove("enableMenu");
+  menu.classList.add("disableMenu");
 }
 
 }
+
+function regresarEvolution(){
+  document.getElementById('vistaEvoluciones').style.display='flex';
+  document.getElementById('vistaDetalleEvoluciones').style.display='none';
+ 
+// ----------------Limpiar la data
+document.getElementById('actualPokemon').innerHTML = null;
+document.getElementById('candyEvolution').innerHTML = null;
+document.getElementById('prevEvolution').innerHTML = null;
+document.getElementById('nextEvolution').innerHTML = null;
+document.getElementsByClassName('boxPrev').innerHTML = null;
+document.getElementsByClassName('boxNext').innerHTML = null;
+
+
+}
+
 
 function inicio(){
   document.getElementById('vistaPpal').style.display='block';
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='none';
   document.getElementById('vistaCombate').style.display='none';
-  listaMenu.style.display = 'none';
+  showMenu();
+ 
 }
 
 function conocerP(){
-  // console.log('Click')
   document.getElementById('vistaPpal').style.display='none';
   document.getElementById('vistaConoceP').style.display='block';
   document.getElementById('vistaEvoluciones').style.display='none';
   document.getElementById('vistaCombate').style.display='none';
-  listaMenu.style.display = 'none';
-  //document.getmen completra???
+ 
+  showMenu();
+  
 }
 
 function evoluciones(){
@@ -63,67 +85,172 @@ function evoluciones(){
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='block';
   document.getElementById('vistaCombate').style.display='none';
-  listaMenu.style.display = 'none';
+  showMenu();
+ 
 
-  //---IMPRIMIR LISTA DE TODOS LOS POKEMON EN PANTALLA
-  const arregloData=data.pokemon;
+
+  //------IMPRIMIR LISTA DE TODOS LOS POKEMON EN PANTALLA
   
-  arregloData.forEach(elemento=> {
-  let contenedorPpal=document.getElementById('listaPokemon');
-  let containerPokemon=document.createElement("div");
-  containerPokemon.classList.add('boxPokemon');
-  let imprimirNum=document.createElement("p")
-  imprimirNum.innerHTML=elemento.num;
-  containerPokemon.appendChild(imprimirNum);
-  
-  let imprimirImagen=document.createElement("img");
-  imprimirImagen.src=elemento.img;
-  containerPokemon.appendChild(imprimirImagen);
-  
-  let imprimirName=document.createElement("h3");
-  imprimirName.innerHTML=elemento.name;
-  containerPokemon.appendChild(imprimirName);
-  contenedorPpal.appendChild(containerPokemon);
+    arregloData.forEach(elemento=> {
+    let contenedorPpal=document.getElementById('listaPokemon');
+    let containerPokemon=document.createElement("div");
+    containerPokemon.classList.add('boxPokemon');
+    let imprimirNum=document.createElement("p")
+    imprimirNum.innerHTML=elemento.num;
+    containerPokemon.appendChild(imprimirNum);
+    
+    let imprimirImagen=document.createElement("img");
+    imprimirImagen.src=elemento.img;
+    containerPokemon.appendChild(imprimirImagen);
+    
+    let imprimirName=document.createElement("h3");
+    imprimirName.innerHTML=elemento.name;
+    containerPokemon.appendChild(imprimirName);
+    contenedorPpal.appendChild(containerPokemon);
 
 
   });
 
   const tarjeta=document.querySelector('#listaPokemon');
-  const onClick= (e) =>{
-  const nombre = e.target;
-  console.log(nombre.value); 
+  tarjeta.addEventListener('click', onClick);
+  //llamar la función que va a traer evolucion con containerPokemom con el AddLIsterner 
 
+}
+
+const onClick= (e) =>{
+  // ----------------Limpiar la data
+  document.getElementById('actualPokemon').innerHTML = null;
+  document.getElementById('candyEvolution').innerHTML = null;
+  document.getElementById('prevEvolution').innerHTML = null;
+  document.getElementById('nextEvolution').innerHTML = null;
+  document.getElementsByClassName('boxPrev').innerHTML = null;
+  document.getElementsByClassName('boxNext').innerHTML = null;
+
+
+// -----------Cargar datos de evolución del pokemon
+  const nombre = e.target.textContent;
+  console.log(nombre);
+  document.getElementById('vistaEvoluciones').style.display='none';
   const rtaEvolucion = detalleEvoluciones(nombre, arregloData);
   console.log(rtaEvolucion);
-  rtaEvolucion.prev_evolution.forEach(elemento=>{
-    console.log(elemento);
+  document.getElementById('vistaDetalleEvoluciones').style.display='flex';
+
+  let NumPokemonActual=document.createElement("p");
+  NumPokemonActual.innerHTML="No. "+ rtaEvolucion.num;
+  document.getElementById("actualPokemon").appendChild(NumPokemonActual);
+  let ImagenPokemonActual=document.createElement("img");
+  ImagenPokemonActual.src=rtaEvolucion.img;
+  document.getElementById("actualPokemon").appendChild(ImagenPokemonActual);
+  let NamePokemonActual=document.createElement("p");
+  NamePokemonActual.innerHTML=rtaEvolucion.name;
+  document.getElementById("actualPokemon").appendChild(NamePokemonActual);
+
+
+  let CandyPokemonActual=document.createElement("p");
+  CandyPokemonActual.innerHTML= "Candy: " + rtaEvolucion.candy;
+  document.getElementById('candyEvolution').appendChild(CandyPokemonActual);
+
+  if ( rtaEvolucion.candy_count!=null){
+    let cantidadCandyActual=document.createElement("p");
+    cantidadCandyActual.innerHTML= "Cantidad Actual: "+rtaEvolucion.candy_count;
+    document.getElementById('candyEvolution').appendChild(cantidadCandyActual);
+  }
+  
+ 
+  if(rtaEvolucion.prev_evolution == null){
+    document.getElementById('containerPrev').style.display='none';
+  }
+
+  if (rtaEvolucion.prev_evolution != null){
+    document.getElementById('containerPrev').style.display='flex';
+    rtaEvolucion.prev_evolution.forEach(elemento=>{
     
-    // let imprimirNum=document.createElement("p")
-  //   imprimirNum.innerHTML=containerPokemon.num;
-  //   document.getElementById('vistaDetalleEvoluciones').appendChild(imprimirNum);
+    let containerPrevEvolution=document.getElementById('prevEvolution');
+    let containerPokemonPrev=document.createElement("div");
+    containerPokemonPrev.classList.add('boxPrev');
+    
+    let imprimirNumEvolucion=document.createElement("p")
+    imprimirNumEvolucion.innerHTML=elemento.num;
+    let numero=elemento.num;
+    containerPokemonPrev.appendChild(imprimirNumEvolucion);
+    
+    let rtaCandyPrev=candyPokemon(arregloData,numero);
+
+    let ImagenPokemonPrev=document.createElement("img");
+    ImagenPokemonPrev.src=rtaCandyPrev.img;
+    containerPokemonPrev.appendChild(ImagenPokemonPrev);
+
+    let imprimirNameEvolucion=document.createElement("p")
+    imprimirNameEvolucion.innerHTML=elemento.name;
+    containerPokemonPrev.appendChild( imprimirNameEvolucion);
+    containerPrevEvolution.appendChild(containerPokemonPrev);
+
+    if ( rtaCandyPrev.candy_count!=null){
+      let cantidadCandyPrev=document.createElement("p");
+      cantidadCandyPrev.innerHTML= "Cantidad Prev: "+rtaCandyPrev.candy_count;
+      document.getElementById('candyEvolution').appendChild(cantidadCandyPrev);
+    }
 
   });
-  
+ } 
+ 
+ if(rtaEvolucion.next_evolution == null){
+  document.getElementById('containerNext').style.display='none';
+}
+ 
+ if (rtaEvolucion.next_evolution != null) {
+  document.getElementById('containerNext').style.display='flex';
+    rtaEvolucion.next_evolution.forEach(elemento=>{
+
+    let containerNextEvolution=document.getElementById('nextEvolution');
+    let containerPokemonNext=document.createElement("div");
+    containerPokemonNext.classList.add('boxNext');
+    
+    let imprimirNumEvolucion=document.createElement("p")
+    imprimirNumEvolucion.innerHTML=elemento.num;
+    let numero=elemento.num;
+    containerPokemonNext.appendChild(imprimirNumEvolucion);
+    
+    let rtaCandyNext=candyPokemon(arregloData,numero);
+
+    let ImagenPokemonNext=document.createElement("img");
+    ImagenPokemonNext.src=rtaCandyNext.img;
+    containerPokemonNext.appendChild(ImagenPokemonNext);
+
+    let imprimirNameEvolucion=document.createElement("p")
+    imprimirNameEvolucion.innerHTML=elemento.name;
+    containerPokemonNext.appendChild( imprimirNameEvolucion);
+    containerNextEvolution.appendChild(containerPokemonNext);
+
+    if ( rtaCandyNext.candy_count!=null){
+      let cantidadCandyNext=document.createElement("p");
+      cantidadCandyNext.innerHTML= "Cantidad Next: "+ rtaCandyNext.candy_count;
+      document.getElementById('candyEvolution').appendChild(cantidadCandyNext);
+    }
+
+    });
+
   }
-  tarjeta.addEventListener('click', onClick);
-
-//llamar la función que va a traer evolucion con containerPokemom con el AddLIsterner 
-
-
 
 }
 
 
+// ----------FUNCIÓN PARA ORDENAR LISTA DE POKEMON
+function ordenarLista(){
+  document.getElementById('listaPokemon').innerHTML = null;
+  const listaOrdenada= ordenarPokemon(arregloData);
+  evoluciones(listaOrdenada);
+  showMenu();
+}
 
 
-
-
+// ------FUNCIÓN HISTORIA COMBATE
 function combate(){
   document.getElementById('vistaPpal').style.display='none';
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='none';
   document.getElementById('vistaCombate').style.display='block';
-  listaMenu.style.display = 'none';
+  showMenu();
 }
 
 
@@ -139,11 +266,15 @@ nombreNumeroPokemon.addEventListener("keyup", function(event) {
     }
   });
 
+
+  // ------------FUNCIÓN PARA HISTORIA CONOCE TU POKEMON LLENA VISTA CON DATOS DEL POKEMON
 function llenarFrontPokemon(valor){
+  document.getElementById('vistaDetalleEvoluciones').style.display='none';
   const arreglo=data.pokemon;
   const pokemon = buscarPokemon(valor,arreglo);
-//   document.getElementById('carateristicas').style.display='block';
+  
   document.getElementById('carateristicas').style.display='flex';
+
 
   if (!pokemon)
   {
@@ -151,23 +282,17 @@ function llenarFrontPokemon(valor){
     return
   }
   
-
    //Se limpia la data
   document.getElementById("weaknesses").innerHTML = null
   document.getElementById("multipliers").innerHTML = null
   document.getElementById("typePokemon").innerHTML = null
   
-
    // Se llena la data del pokemon
     document.getElementById("textNumber").innerHTML = "No "+pokemon.num
     document.getElementById("textName").innerHTML = pokemon.name
     document.getElementById("alturavalordata").innerHTML = pokemon.height
     document.getElementById("pesovalordata").innerHTML = pokemon.weight
     document.getElementById("imgPok").src = pokemon.img
-
-    // document.getElementById("tipovalordata").innerHTML = pokemon.type
-    // document.getElementById("debilidadesvalordata").innerHTML = pokemon.weaknesses;
-
 
     if (pokemon.multipliers != null){
       pokemon.multipliers.forEach(elemento=> {
@@ -194,9 +319,6 @@ function llenarFrontPokemon(valor){
         document.getElementById('weaknesses').appendChild(imprimirDebilidades);
         });
 
-
-
-
           //-------------- PRIMERA FORMA REALIZADA PARA IMPRIMIR VARIOS VALORES DE UN ARREGLO
     // if (pokemon.multipliers != null)
     // {
@@ -212,8 +334,12 @@ function llenarFrontPokemon(valor){
     //   }
     // }
 
-    
-    // console.log(pokemon)
+}
+
+function cerrarCaracteristicasPokemon(){
+document.getElementById('carateristicas').style.display='none';
+
+
 }
 
 

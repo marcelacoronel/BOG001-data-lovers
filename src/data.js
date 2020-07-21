@@ -10,16 +10,32 @@ export const buscarPokemon = (valor,arreglo) => {
 };
 
 
-export const detalleEvoluciones=(nombre, arregloData) =>{
- console.log(nombre);
+export const detalleEvoluciones = (nombre, arregloData) =>{
  
-  const evolucion=arregloData.find(elemento=>elemento.name==nombre);
-  console.log(evolucion);
+  const evolucion=arregloData.find(elemento=>elemento.name==nombre ||elemento.num==nombre ||elemento.img==nombre);
   
   return evolucion;
   
 }
-// export const buscarTodos=(arregloData)=>{
+
+export const candyPokemon = (arregloData,numero)=>{
+  const candy=arregloData.find(elemento=>elemento.num==numero)
+  return candy;
+}
 
 
-// }
+// --------FUNCIÓN PARA ORDENAR LISTA DE POKEMON----FUNCIONA
+export const ordenarPokemon = (arregloData)=>{
+
+  const ordenarData=arregloData.sort((prev,next) => {
+   const ordenar = prev.name > next.name ? 1: -1;
+ 
+    return ordenar;
+  });
+
+  return ordenarData;
+  
+}
+
+
+
