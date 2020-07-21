@@ -1,4 +1,4 @@
-import { buscarPokemon } from './data.js';
+import { buscarPokemon,randomPokemon,probabilidadCombate } from './data.js';
 // import { verDatos } from './data.js'
 
 // import data from './data/pokemon/pokemon.js'
@@ -26,6 +26,14 @@ document.getElementById('botonMenu1').addEventListener('click', inicio);
 document.getElementById('botonMenu2').addEventListener('click', conocerP);
 document.getElementById('botonMenu3').addEventListener('click', evoluciones);
 document.getElementById('botonMenu4').addEventListener('click', combate);
+document.getElementById('botonVolver').addEventListener('click', volverJugar);
+
+// evento iniciar combate
+document.getElementById('titulopoke').addEventListener('click',iniciarcombate)
+document.getElementById('pokebola').addEventListener('click',iniciarcombate)
+
+let nombreNumeroPokemon2 = document.getElementById('numPokemon2');
+document.getElementById('botonSeleccionar').addEventListener('click',function(){seleccionarPokemon(nombreNumeroPokemon2.value)})
 
 
 function verMenu(){
@@ -40,17 +48,7 @@ else{
 
 }
 
-function verMenu(){
-if(contador==1){
-  listaMenu.style.display = 'block';
-  contador=0;
-}
-else{
-  listaMenu.style.display = 'none';
-  contador=1
-}
 
-}
 
 function inicio(){
   document.getElementById('vistaPpal').style.display='block';
@@ -98,7 +96,7 @@ function combate(){
   document.getElementById('vistaPpal').style.display='none';
   document.getElementById('vistaConoceP').style.display='none';
   document.getElementById('vistaEvoluciones').style.display='none';
-  document.getElementById('vistaCombate').style.display='block';
+  document.getElementById('vistaCombate').style.display='flex';
   listaMenu.style.display = 'none';
 }
 
@@ -200,6 +198,64 @@ function llenarFrontPokemon(valor){
     // console.log(pokemon)
 }
 
+let numeropokerival
+
+function iniciarcombate(){
+  document.getElementById('fondocombate1').style.display='none';
+  document.getElementById('fondocombate2').style.display='flex';
+
+  const pokemonrival = randomPokemon()
+  numeropokerival=pokemonrival
+  document.getElementById("pokeRival").src = pokemonrival.img
+  document.getElementById("nombrepokemonrival").innerHTML = pokemonrival.name
+}
+
+function volverJugar(){
+  iniciarcombate()
+  document.getElementById('tupokemon1').style.display='flex'
+  document.getElementById('tupokemon').style.display='none'
+  document.getElementById("game").style.display = 'none'
+  document.getElementById("barraRival").style.backgroundColor = '#49A941'
+  document.getElementById("barraTuya").style.backgroundColor = '#49A941'
+  document.getElementById("numPokemon2").value = null
+}
+
+function seleccionarPokemon(valor){
+  
+  const arreglo=data.pokemon;
+  const pokemon = buscarPokemon(valor, arreglo) 
+  if (!pokemon)
+  {
+    alert('No se encontro el pokemon')
+    return
+  }
+
+  document.getElementById('tupokemon1').style.display='none'
+  document.getElementById('tupokemon').style.display='flex'
+
+  document.getElementById("pokeTuyo").src = pokemon.img
+  document.getElementById("nombrepokemonTuyo").innerHTML = pokemon.name
+
+  const resultados=probabilidadCombate(pokemon.id,numeropokerival.id)
+  
+  if(resultados==1){
+    document.getElementById("resultado").innerHTML = "Victoria para"
+    document.getElementById("namegame").innerHTML = pokemon.name
+    document.getElementById("game").style.display = 'flex'
+    document.getElementById("barraRival").style.backgroundColor = 'red'
+  }
+  else if (resultados == 0){
+    document.getElementById("resultado").innerHTML = "Empate entre"
+    document.getElementById("namegame").innerHTML = pokemon.name+' y '+numeropokerival.name
+    document.getElementById("game").style.display = 'flex'
+  }
+  else{
+    document.getElementById("resultado").innerHTML = "Victoria para el rival"
+    document.getElementById("namegame").innerHTML = numeropokerival.name
+    document.getElementById("game").style.display = 'flex'
+    document.getElementById("barraTuya").style.backgroundColor = 'red'
+  }
+}
 
 
 

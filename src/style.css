@@ -11,7 +11,7 @@ html,body{
 
 #vistaConoceP, #vistaEvoluciones, #vistaCombate {
   display: none;
-  /* height: 100%; */
+  height: 100%;
 }
 
 body{
@@ -408,6 +408,163 @@ header{
   height: 100%;
   /* justify-content: center; */
 }
+#fondocombate1{
+  background-image:url("img/arenacombate\ 3.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} 
+#titulopoke{
+ 
+  width: 100px;
+  
+}
+#pokebola{
+  
+  width: 100px;
+  padding: 10px 10px;
+}
+#fondocombate2{
+  background-image:url("img/arenacombate\ 3.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} 
+
+.cajadeinformacion{
+  width: 50%;
+  height: 100%;
+  /* align-items: center;  */
+  justify-content: center; 
+  display: flex;
+  
+}
+  
+.imgpokemonrival{
+  width: 50%;
+  height: 100%;
+}
+.pokemonrival{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#pokeRival{
+  width: 100%;
+}
+.tupokemon{
+  height: 50%;
+  width: 100%;
+  display: none;
+  align-items: flex-end;
+}
+
+.imgpokemontuyo{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cajadeinformacionTuyo{
+  width: 50%;
+  height: 100%;
+  align-items: flex-end; 
+  justify-content: center; 
+  display: flex;
+  margin-bottom: 30px;
+}
+.tupokemon1{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tupokemon1 label{
+  color: white;
+  margin-bottom: 20px;
+}
+
+.tupokemon1 input{
+  width: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#cajita{
+  background-color: #4177A9;
+  height: 70px;
+  width: 100px;
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+#nombrepokemonrival{
+  color: #ECF2F4;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+#nombrepokemonTuyo{
+  color: #ECF2F4;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+.barradeenergia{
+  width:80px;
+  height: 20px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color:white ;
+  border-style: solid;
+  background-color: #49A941;
+}
+#game{
+  height:350px;
+  width:350px;
+  /* background-color: red; */
+  position: absolute;
+  /* top:50%;
+  left:50% ; */
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color:greenyellow;
+}
+
+
 
 footer{
   background: #051948;
@@ -450,9 +607,64 @@ footer p{
   .line2DetalleP, .line3DetalleP{
     font-size: 30px;
   }
-
-
+  #fondocombate1{
+    background-image:url("img/arenacombate\ 3.png");
+  }
+  #fondocombate2{
+    background-image:url("img/arenacombate\ 3.png");
+  }
+  
+  #titulopoke {
+    width: 300px;
+    }
+  #pokebola {
+    width: 200px;
     
+  }
+  .tupokemon1 label{
+   font-size: 30px;
+  }
+  #numPokemon2{
+    width:200px ;
+    font-size: 25px;
+    text-align: center;
+  }
+  .btn{
+    width: 200px;
+    padding-left: 0%; 
+    padding-right: 0%;
+
+  }
+
+
+  #cajita{
+    width: 150px;
+    height: 100px;
+  }
+  .cajadeinformacionTuyo{
+    margin-top: 200px;
+    margin-right: 200px;
+  }
+  #pokeTuyo{
+    width: 400px;
+  }
+  .cajadeinformacion{
+    margin-top: 80px;
+    margin-left: 150px;
+  }
+  #nombrepokemonrival{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .cajadeinformacionTuyo{
+    margin-bottom: 80px;
+  }
+  #nombrepokemonTuyo{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+
   footer{
    height: 50px;
    display: flex;
@@ -467,7 +679,7 @@ footer p{
     
   }
   #tituloVistaConocer{
-  font-size: 1.5em;
+    font-size: 1.5em;
   }
   .buscarP{
     font-size: 1em;
@@ -476,18 +688,19 @@ footer p{
 
   }
   .buscarP label {
-  font-size:1.5em ;
+   font-size:1.5em ;
   }
   .buscarP input{
-  font-size: 1.3em;
-  text-align: center;
+    font-size: 1.3em;
+    text-align: center;
 
   }
   .contenidoDebilidades{
     height:200px;
   }
-
 }
+
+
 
 
 #imgPokemon{
@@ -501,6 +714,8 @@ footer p{
   width: 50%;
 
 }
+
+
 
 /*  table ipad pro */
 @media screen  and (min-device-width: 780px) and (max-width:1025px){
@@ -521,13 +736,67 @@ footer p{
     font-size:1.6em;
   }
   .line1DetalleP{
-    font-size: 40px;
+    font-size: 30px;
   }
   .line2DetalleP, .line3DetalleP{
     font-size: 30px;
   }
+  #fondocombate1{
+    background-image:url("img/arenacombate\ 3.png");
+  }
+  #fondocombate2{
+    background-image:url("img/arenacombate\ 3.png");
+  }
+  #titulopoke {
+    width: 300px;
+    }
+  #pokebola {
+    width: 200px;
+    
+  }
+  .tupokemon1 label{
+   font-size: 30px;
+  }
+  #numPokemon2{
+    width:200px ;
+    font-size: 25px;
+    text-align: center;
+  }
+  .btn{
+    width: 200px;
+    padding-left: 0%; 
+    padding-right: 0%;
 
-
+  }
+  #cajita{
+    width: 150px;
+    height: 100px;
+  }
+  .cajadeinformacionTuyo{
+    margin-top: 200px;
+    margin-right: 200px;
+  }
+  #pokeTuyo{
+    width: 400px;
+  }
+  .cajadeinformacion{
+    margin-top: 80px;
+    margin-left: 150px;
+  }
+  #nombrepokemonrival{
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .cajadeinformacionTuyo{
+    margin-bottom: 90px;
+  }
+  #nombrepokemonTuyo{
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  /* #vistaCombate{
+    flex-direction: row;
+  } */
     
   footer{
    height: 50px;
@@ -565,21 +834,22 @@ footer p{
   #tituloVistaConocer{
     font-size: 2em;
   }
-
 }
+
 
 
 /* -------DESKTOP MAX 1200 Y 1600 */
 
 @media screen 
-  and (min-device-width: 790px) 
-  and (max-device-width: 1600px)
-  and (max-device-width: 1600px){
+  and (min-device-width: 1025px) and (max-device-width: 1600px) and (max-device-width: 1600px){
 
 
     #vistaPpal{
     font-size: 16px;
     }
+  #root{
+    opacity: 10;
+  }
 
 
     .logo img{
@@ -620,8 +890,100 @@ footer p{
       #weaknesses{
         flex: 0 1 30%;
       }
+      #fondocombate1{
+        background-image:url("img/stadium2.png");
+      }
+      #fondocombate2{
+        background-image:url("img/stadium2.png");
+        flex-direction: row-reverse;
+      }
+
+      #game{
+        bottom: 200px;
+      }
+      
+      #titulopoke {
+        width: 300px;
+        }
+      #pokebola {
+        width: 200px;
+        
+      }
+      .tupokemon1 label{
+        color: yellow;
+       font-size: 30px;
+       margin-bottom: 0px;
+       height: 20%;
+       margin-top: 150px;
+       
+      }
+      #numPokemon2{
+        width:200px ;
+        font-size: 25px;
+        text-align: center;
+      }
+      .btn{
+        width: 200px;
+        padding-left: 0%; 
+        padding-right: 0%;
     
-    
+      }
+      .cajadeinformacion #cajita{
+        width: 200px;
+        height: 100px;
+        margin-top: 300px;
+      }
+      .cajadeinformacionTuyo #cajita{
+        width: 200px;
+        height: 100px;
+        margin-bottom: 195px;
+      }
+      .cajadeinformacionTuyo{
+        margin-top: 100px;
+        margin-right: 0px;
+        
+      }
+      #pokeRival{
+        margin-top: 200px;
+        width: 300px;
+      }
+      #pokeTuyo{
+        width: 300px;
+        margin-bottom: 100px;
+        margin-left: 50 px;
+      }
+      .cajadeinformacion{
+        margin-top: 0px;
+        margin-left: 0PX;
+      }
+      #nombrepokemonrival{
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      .cajadeinformacionTuyo{
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      #nombrepokemonTuyo{
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      .pokemonrival{
+        margin-top: 0px;
+        width: 50%;
+        height: 100%;
+        margin-bottom: 0px;
+      }
+      .tupokemon{
+        margin-top: 100px;
+        height: 100%;
+       width: 50%; 
+      }
+      .padre{
+        
+      /* background-image:none; */
+        
+      }
         
       footer{
        height: 50px;
@@ -636,6 +998,7 @@ footer p{
       font-size: 16px;
         
       }
+  
       #tituloVistaConocer{
       font-size: 1.5em;
       }
@@ -659,8 +1022,11 @@ footer p{
       #tituloVistaConocer{
         font-size: 2em;
       }
+
+      /* combate */
+    p{ align-items: center;}
+    
     }
-  
 
 
 
