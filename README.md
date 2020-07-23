@@ -6,48 +6,54 @@
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+
 
 ***
 
-
-
 ## 1. Resumen del proyecto
 
-En este proyecto  se contruyo **una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúa a los requerimientos que el usuario
-necesita.
-
-creamos una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc). 
- Nuestro usuario son jugadores de Pokemon go que requieren informacion para saber las carateristicas, 
- evoluciones del pokemon capturado para poder sacarle el mayor provecho al momento de llevarlo al combate.
+El presente proyecto presenta un sitio web que se creó con el fin de brindar información relevante a los usuarios y amantes de Pokémon Go, en el pueden tener acceso a característica detalladas de cada Pókemon, ya sea que haya sido recien capturado o desee capturarlo para agregarlo a su equipo. Además, puede conocer detalles de las evolución de cada Pókemon identificando la cantidad de Candies para cada una. Y finalmente este sitio web dedica una espacio especial para usuarios más experimentados llamado "Combate" o si está iniciando también le permite conocer como enfrentar a otros Pokémon teniendo en cuenta las fortalezas y debilidades entre los Pokémon enfrentados en cambate.
 
 
 * Visualizacion del proyecto:
 
+**Vista principal del sitio.**
+![](src/img/vistaPpal_mobile.png.png)
+![](src/img/vistaPpal_desktop.png)
 
-Estos son datos que utilizamos :
+**Vista Historia de usuario 1.**
+![](src/img/vistaConoceP_mobile.png)
+![](src/img/vistaConoceP_desktop.png)
+
+**Vista 1 Historia de usuario 2.**
+![](src/img/vistaEvoluciones1_mobile.png)
+![](src/img/vistaEvoluciones1_desktop.png)
+
+**Vista 2 Historia de usuario 2 y 3.**
+![](src/img/vistaEvoluciones2_mobile.png)
+![](src/img/vistaEvoluciones2_desktop.png)
+
+**Vista 1 Historia de usuario 4.**
+![](src/img/vistaCombate1_mobile.png)
+![](src/img/vistaCombate1_desktop.png)
+
+**Vista 2 Historia de usuario 4.**
+![](src/img/vistaCombate2_mobile.png)
+![](src/img/vistaCombate2_desktop_ganador.png)
+![](src/img/vistaCombate2_desktop.png)
+
+Datos que se utilizaron para desarrollar el proyecto:
 
 * [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
+  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto
+  y Johto, junto con sus respectivas estadísticas usadas en el juego.
   [Pokémon GO](http://pokemongolive.com).
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
 
-
 ## 3. Objetivos de aprendizaje
 
-los  objetivo principal calcanzados en este proyecto  fueron:
-
-
+Los principales objetivos de aprendizaje alcanzados en este proyecto son:
 
 ### HTML y CSS
 
@@ -111,306 +117,95 @@ Los criterios para considerar que has completado este proyecto son:
 
 ### Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+El presente sitio web sobre Pokémon Go, brinda a los usuarios tres importantes espacios con información relevante sobre sus Pokémon.  A través del recorrido por nuestro sitio puede resolver muchas de sus inquietudes, puede conocer información detallada sobre su Pokémon recien capturado como nombre,número, tipos, altura, peso, debilidades e imagen, y esto lo obtiene realizando una busqueda por su número o por su nombre (Ej: 25 o Pikachu) en el espacio "Conoce tu Pokémon".
+
+Nuestro usuarios también pueden tener acceso a todos los Pokémon quienes se muestran detallados por número, imagen y nombre, y donde puede seleccionar el deseado para poder obtener la información específica de las evoluciones(actual, previa y siguiente) de ese Pokémon, y candies requeridos para alcanzar cada una, para esto visita nuestro link "Evoluciones".
+ 
+Finalmente nuestros usuarios más experimentados podrán disfrutar de un espacio llamado "Combate", que es un lugar de diversión donde el sistema creado en nuestro sitio genera un ambiente de combate donde se muestra en pantalla un Pokémon (Nombre e imagen) seleccionado por el sistema de manera aleatoria llamado "Rival"  y el usuario puede seleccionar su Pokémon para combartir digitando el número o nombre del Pókemon que desea usar en el combate, nuestro sistema muestra también en pantalla la imagen y nombre del Pokémon del usuario y realiza una comparación entre las fortalezas y debilidadades de cada Pokémon y da como resultado un ganador y un perdedor o un empate.
 
 ### Historias de usuario
-H1:Conoce tu Pokémon. Yo como Entrenador. Quiero ver las características de un pokémon. Para conocer en detalle al pokémon recién capturado.
-H2:Evoluciones. Yo COMO Entrenador, QUIERO ver cuántas y cuáles evoluciones tiene un pokémon. PARA Conocer mejoras de habilidades de un pokémon.
-H3: Mejorar Pokémon. Yo COMO Maestro pokémon. QUIERO Conocer cantidad de caramelos que necesita un pokémon para evolucionar.. PARA hacer a un pokémon más poderoso.
-H4: Combate. Yo COMO Maestro pokémon. QUIERO Conocer las debilidades y tipos de un pokémon.PARA seleccionar el pokémon adecuado para una batalla.
+Una vez realizada la investigación de usuarios se identificaron las siguientes Historias de Usuario:
+
+- H1:Conoce tu Pokémon. Yo como Entrenador. Quiero ver las características de un pokémon. Para conocer en detalle al pokémon recién capturado.
+- H2:Evoluciones. Yo COMO Entrenador, QUIERO ver cuántas y cuáles evoluciones tiene un pokémon. PARA Conocer mejoras de habilidades de un pokémon.
+- H3: Mejorar Pokémon. Yo COMO Maestro pokémon. QUIERO Cono cer cantidad de caramelos que necesita un pokémon para evolucionar.PARA hacer a un pokémon más poderoso.
+- H4: Combate. Yo COMO Maestro pokémon. QUIERO Conocer las debilidades y tipos de un pokémon. PARA seleccionar el pokémon adecuado para una batalla.
 
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
+Las siguientes imágenes describen los Sketches iniciales diseñados para el proyecto, Mobile, tablet, desktop.
 
+**Vista principal del sitio.** , **Vista 1 Historia de usuario 1.** y **Vista 2 Historia de usuario 1.**
+![](src/img/sketch1_H1.jpg)
+![](src/img/sketch2_H1.jpg)
 
+**Vistaa 1 y 2 Historia de usuario 2 y 3.**
+![](src/img/sketch1_H2.jpg)
+![](src/img/sketch2_H2.jpg)
+![](src/img/sketch1_H2_mobile.jpg)
+![](src/img/sketch2_H2y H3_mobile.jpg)
+
+**Historia de usuario 4.**
+![](src/img/sketch1_H4.jpg)
+![](src/img/sketch2_H4.jpg)
+
+Estas imágenes corresponden a las mejoras realizadas en los sketches de acuerdo a los test de usabilidad.
+
+![](src/img/sketch_H4.jpg)
+![](src/img/cambio_menu.jpg)
+![](src/img/sketch_H1_mobile.jpg)
 
 #### Prototipo de alta fidelidad
-![](Prototipo/pag1_opt.png)
+Las siguientes imágenes corresponden al prototipo de alta fidelidad realizado en figma, y corresponde al prototipo final para móbile, tablet y desktop.
 
-![](Prototipo/pag2_opt.png)
+**Historia de usuario 1.**
+![](src/img/prot_VistaPpal_mobile.png)
+![](src/img/prot_vista_H1_mobile.png)
 
-![](Prototipo/pag3_opt.png)
+**Historia de usuario 2 y 3.**
+![](src/img/prot_vista1_H2yH3_mobile.png)
+![](src/img/prot_vista2_H2yH3_mobile.png)
 
+**Historia de usuario 4.**
+![](src/img/prot_vista1_H4_mobile.png)
+![](src/img/prot_vista2_H4_mobile.png)
+
+Una vez realizado el prototipo inicial de alta fidelidad en figma, se realizaron mejoras en el mismo siguiendo las indicaciones recibidas en el feedback durante lo test de usabilidad. Las siguientes imágenes muestran el proceso de estas mejoras.
+
+![](src/img/inicial_Ppal.png)
+![](src/img/inicial_H1.png)
+![](src/img/vistaPpal_desktop_2.png)
+![](src/img/vistaH1_desktop.png)
+![](src/img/cambio_colores.png)
+![](src/img/cambio_colores2.png)
+![](src/img/cambio color.png)
+![](src/img/fondo_mobile.png)
+![](src/img/vistaPpal_tablet.png)
+![](src/img/H1_tablet.png)
+![](src/img/vista2_H2_H3_tablet.png)
+![](src/img/vista1_H4_tablet.png)
+![](src/img/vista2_H4_tablet.png)
+![](src/img/vista1_H2_desktop.png)
+![](src/img/vista2_H2_H3_desktop.png)
+![](src/img/vista1_H4.png)
+![](src/img/vista2_H4.png)
+
+
+- **Link a figma:** https://www.figma.com/file/ZOH8ZIJEK2S9eFIdhMG2AN/Data-Lovers?node-id=0%3A1
 
 #### Testeos de usabilidad
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+El feedback recibido durante los test de usabilidad nos permitió detallar las necesidades de los usuarios en el momento de navegar por nuestro sitio web, así como también pudimos identificar que algunos colores utilizados en el sitio se prestaban para crear confusión en el usuario, por ejemplo que al usar el color rojo como fondo de un elemento le hacía pensar al usuario que había un error ya que este color es asociado a fallas en otras cosas. Algunos de los hayazgos identificados durante los test de usabilidad y las propuestas de mejora fueron:
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+- El Menú en el sketch inicial es muy pequeño y poco claro (tipo menú hamburguesa), parece más un espacio informativo o complemetario y no un espacio importante de navegación del sitio (El sketch inicial fue creado pensando en diseño desktop). Se propueso en crear un menú horizontal con tamaño de texto adecuado para un sitio pensado en desktop.
+- Color de fondo utilizado en el espacio central y principal de información del sitio no se veía acorde a la paleta de colores. Se realizaron varios cambios antes de escoger el color final, utilizando herramientas para selección de paleta de colores y contraste.
+- El color de texto amarillo seleccionado inicialmente para mostrar información importante el nuestro sitio web no es el adecuado si se tienen en cuenta las características de contraste con el fondo, ya que no es fácil de leer para el usuario, para esto se realizó estudio de los principios de diseño visual y se encontró que el color amarillo es uno de los colores no recomendado y se utilizó la herramienta *https://contrast-ratio.com/#* para seleccionar los colores adecuados.
+- El color de fondo en el footer del sitio se muestra en color no apropiado y genera confusión en el usuario. Se seleccionó el tono de acuerdo a la paleta de colores que se escogió luego de las investigaciones de diseño visual.
+- La información presentada en algunas vistas de la página se muestra poco organizada, se realizó estudio y aplicación de Flexbox para mejorarlo.
+- En general se realizó ajustes de tamaño de texto o texto resaltado (negrita) en algunas vistas para que fuese más claro y legible para el usuario.
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
+**Link trello:** https://trello.com/b/4RcKsovH/data-lovers
 
-Como mínimo, tu implementación debe:
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
-
-### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
-
-## 7. Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#6-hacker-edition) más arriba.
-
-No se debe utilizar la _pseudo-variable_ `this`.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |     ├── rickandmorty.js
-|  |     └── rickandmorty.json
-|  |     └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-
-directory: 6 file: 17
-```
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-En este archivo encontrarás una serie de _imports_ _comentados_. Para _cargar_
-las diferentes fuentes de datos tendrás que _descomentar_ la línea
-correspondiente.
-
-Por ejemplo, si "descomentamos" la siguiente línea:
-
-```js
-// import data from './data/pokemon/pokemon.js';
-```
-
-La línea quedaría así:
-
-```js
-import data from './data/pokemon/pokemon.js';
-```
-
-Y ahora tendríamos la variable `data` disponible en el script `src/main.js`.
-
-### `src/data.js`
-
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
-
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
-
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
-
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
-
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
-
-### Contenido de referencia
-
-#### Diseño de experiencia de usuario (User Experience Design)
-
-* Investigación con usuarios / entrevistas
-* [Principios de diseño visual](https://lms.laboratoria.la/cohorts/bog-2020-05-bc-core-bog001/courses/product-design/01-visual-design/00-web-design-history)
-
-#### Desarrollo Front-end
-
-* [Unidad de testing en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/bog-2020-05-bc-core-bog001/courses/javascript/11-testing/00-opening)
-* [Unidad de arreglos en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/bog-2020-05-bc-core-bog001/courses/javascript/04-arrays/01-arrays)
-* [Unidad de objetos en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/bog-2020-05-bc-core-bog001/courses/javascript/05-objects/01-objects)
-* [Unidad de funciones en curso de JavaScript en LMS.](https://lms.laboratoria.la/cohorts/bog-2020-05-bc-core-bog001/courses/javascript/03-functions/00-opening)
-* [Unidad de DOM en curso de Browser JavaScript en LMS.](https://lms.laboratoria.la/cohorts/bog-2020-05-bc-core-bog001/courses/browser/02-dom/00-opening)
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-
-#### Herramientas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organización del Trabajo
-
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-## 9. Checklist
-
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin o Figma en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
