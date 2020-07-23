@@ -13,6 +13,11 @@ describe('buscarPokemon', () => {
     expect(buscarPokemon("25",arreglo)).toHaveProperty('name', "Pikachu");
     expect(buscarPokemon("25",arreglo)).toHaveProperty('num', "025");
   })
+
+  it('Pikachu existe en el array', () => {
+    expect(buscarPokemon("Pikachu",arreglo)).toHaveProperty('name', "Pikachu");
+    expect(buscarPokemon("Pikachu",arreglo)).toHaveProperty('num', "025");
+  })
   
   it('buscarPokemon retorna false para null', () => {
     expect(buscarPokemon(null,arreglo)).toBe(false);
