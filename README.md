@@ -18,6 +18,7 @@ El presente proyecto presenta un sitio web que se creó con el fin de brindar in
 * Visualizacion del proyecto:
 
 **Vista principal del sitio.**
+
 ![](src/img/vistaPpal_mobile.png.png)
 ![](src/img/vistaPpal_desktop.png)
 
@@ -41,6 +42,7 @@ El presente proyecto presenta un sitio web que se creó con el fin de brindar in
 ![](src/img/vistaCombate2_mobile.png)
 ![](src/img/vistaCombate2_desktop_ganador.png)
 ![](src/img/vistaCombate2_desktop.png)
+
 
 Datos que se utilizaron para desarrollar el proyecto:
 
@@ -138,6 +140,7 @@ Una vez realizada la investigación de usuarios se identificaron las siguientes 
 Las siguientes imágenes describen los Sketches iniciales diseñados para el proyecto, Mobile, tablet, desktop.
 
 **Vista principal del sitio.** , **Vista 1 Historia de usuario 1.** y **Vista 2 Historia de usuario 1.**
+
 ![](src/img/sketch1_H1.jpg)
 ![](src/img/sketch2_H1.jpg)
 
@@ -156,11 +159,13 @@ Estas imágenes corresponden a las mejoras realizadas en los sketches de acuerdo
 ![](src/img/sketch_H4.jpg)
 ![](src/img/cambio_menu.jpg)
 ![](src/img/sketch_H1_mobile.jpg)
+=
 
 #### Prototipo de alta fidelidad
 Las siguientes imágenes corresponden al prototipo de alta fidelidad realizado en figma, y corresponde al prototipo final para móbile, tablet y desktop.
 
 **Historia de usuario 1.**
+
 ![](src/img/prot_VistaPpal_mobile.png)
 ![](src/img/prot_vista_H1_mobile.png)
 
@@ -191,6 +196,7 @@ Una vez realizado el prototipo inicial de alta fidelidad en figma, se realizaron
 ![](src/img/vista2_H2_H3_desktop.png)
 ![](src/img/vista1_H4.png)
 ![](src/img/vista2_H4.png)
+
 
 
 - **Link a figma:** https://www.figma.com/file/ZOH8ZIJEK2S9eFIdhMG2AN/Data-Lovers?node-id=0%3A1
