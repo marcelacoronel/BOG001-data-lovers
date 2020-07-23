@@ -9,11 +9,13 @@ export const buscarPokemon = (valor,arreglo) => {
 };
 
 
+// ----Función para consultar las evoluciones de un pokemon
 export const detalleEvoluciones = (nombre, arregloData) =>{
   const evolucion=arregloData.find(elemento=>elemento.name==nombre ||elemento.num==nombre);
   return evolucion;
 }
 
+// ----Función para consultar los candy por evoluciones de un pokemon
 export const candyPokemon = (arregloData,numero)=>{
   const candy=arregloData.find(elemento=>elemento.num==numero)
   return candy;

@@ -657,7 +657,7 @@ margin: 4px;
   margin-bottom: 20px;
 }
 
-#cajita{
+.cajita{
   background-color: #4177A9;
   height: 70px;
   width: 100px;
@@ -854,7 +854,7 @@ footer p{
   }
 
 
-  #cajita{
+  .cajita{
     width: 150px;
     height: 100px;
   }
@@ -1016,7 +1016,7 @@ footer p{
     padding-right: 0%;
 
   }
-  #cajita{
+  .cajita{
     width: 150px;
     height: 100px;
   }
@@ -1101,7 +1101,7 @@ footer p{
     font-size: 16px;
     }
   #root{
-    opacity: 10;
+    opacity: 0.9;
   }
 
     .logo img{
@@ -1237,12 +1237,14 @@ footer p{
         padding-right: 0%;
     
       }
-      .cajadeinformacion #cajita{
+      .cajadeinformacion .cajita{
         width: 200px;
         height: 100px;
         margin-top: 300px;
       }
+
       .cajadeinformacionTuyo #cajita2{
+
         width: 200px;
         height: 100px;
         margin-bottom: 195px;

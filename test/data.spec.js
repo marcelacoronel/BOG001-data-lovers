@@ -1,7 +1,9 @@
 import { buscarPokemon, detalleEvoluciones, candyPokemon, ordenarPokemon, getRandomInt, randomPokemon, probabilidadCombate } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
+
 const arreglo=data.pokemon;
+
 
 
 describe('buscarPokemon', () => {
@@ -123,12 +125,3 @@ describe('probabilidadCombate', () => {
 });
 
 
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
