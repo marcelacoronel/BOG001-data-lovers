@@ -668,6 +668,17 @@ margin: 4px;
   flex-direction: column;
   
 }
+#cajita2{
+  background-color: #4177A9;
+  height: 70px;
+  width: 100px;
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
 #nombrepokemonrival{
   color: #ECF2F4;
   text-align: center;
@@ -847,6 +858,10 @@ footer p{
     width: 150px;
     height: 100px;
   }
+  #cajita2{
+    width: 150px;
+    height: 100px;
+  }
   .cajadeinformacionTuyo{
     margin-top: 200px;
     margin-right: 200px;
@@ -1002,6 +1017,10 @@ footer p{
 
   }
   .cajita{
+    width: 150px;
+    height: 100px;
+  }
+  #cajita2{
     width: 150px;
     height: 100px;
   }
@@ -1223,7 +1242,9 @@ footer p{
         height: 100px;
         margin-top: 300px;
       }
-      .cajadeinformacionTuyo .cajita{
+
+      .cajadeinformacionTuyo #cajita2{
+
         width: 200px;
         height: 100px;
         margin-bottom: 195px;
@@ -1268,11 +1289,6 @@ footer p{
         margin-top: 100px;
         height: 100%;
        width: 50%; 
-      }
-      .padre{
-        
-      /* background-image:none; */
-        
       }
         
       footer{

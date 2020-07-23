@@ -142,10 +142,10 @@ const onClick= (e) =>{
   }
 
 
-  console.log(nombre);
+  // console.log(nombre);
   document.getElementById('vistaEvoluciones').style.display='none';
   const rtaEvolucion = detalleEvoluciones(nombre, arregloData);
-  console.log(rtaEvolucion);
+  // console.log(rtaEvolucion);
   document.getElementById('vistaDetalleEvoluciones').style.display='flex';
 
   let NumPokemonActual=document.createElement("p");
