@@ -239,4 +239,19 @@ El feedback recibido durante los test de usabilidad nos permitió detallar las n
 
 **Link trello:** https://trello.com/b/4RcKsovH/data-lovers
 
+### Anexo:
+Durante la codificación de las funciones en javascript y la apliación de estilos en CSS para cada historia de usuario, se hizo necesario crear otros sketch adicionales para identificar los elementos que se requerian para conformar una vista y además comprender como aplicar estilos para obtener el resultado deseado(Flexbox). A continuación se detallan algunas imágenes del proceso realizado:
+
+![Vista Historia 1](src/img/H1_1.jpg)
+
+![Vista Historia 1 Detalles](src/img/H1_2.jpg)
+
+![Caracteristicas Pokémon Historia 1](src/img/info_pokemon.jpg)
+
+![Menú](src/img/menu.jpg)
+
+![Identificando detalle de elementos](src/img/H1_elementos.jpg)
+
+![Detalles de evolución Pokémon](src/img/H2_prevNext_evol.jpg)
+
 
