@@ -19,28 +19,40 @@ El presente proyecto presenta un sitio web que se creó con el fin de brindar in
 
 **Vista principal del sitio.**
 
-![](src/img/vistaPpal_mobile.png.png)
+![](src/img/vistaPpal_mobile.png)
+
 ![](src/img/vistaPpal_desktop.png)
 
 **Vista Historia de usuario 1.**
+
 ![](src/img/vistaConoceP_mobile.png)
+
 ![](src/img/vistaConoceP_desktop.png)
 
 **Vista 1 Historia de usuario 2.**
+
 ![](src/img/vistaEvoluciones1_mobile.png)
+
 ![](src/img/vistaEvoluciones1_desktop.png)
 
 **Vista 2 Historia de usuario 2 y 3.**
+
 ![](src/img/vistaEvoluciones2_mobile.png)
+
 ![](src/img/vistaEvoluciones2_desktop.png)
 
 **Vista 1 Historia de usuario 4.**
+
 ![](src/img/vistaCombate1_mobile.png)
+
 ![](src/img/vistaCombate1_desktop.png)
 
 **Vista 2 Historia de usuario 4.**
+
 ![](src/img/vistaCombate2_mobile.png)
+
 ![](src/img/vistaCombate2_desktop_ganador.png)
+
 ![](src/img/vistaCombate2_desktop.png)
 
 
@@ -142,24 +154,32 @@ Las siguientes imágenes describen los Sketches iniciales diseñados para el pro
 **Vista principal del sitio.** , **Vista 1 Historia de usuario 1.** y **Vista 2 Historia de usuario 1.**
 
 ![](src/img/sketch1_H1.jpg)
+
 ![](src/img/sketch2_H1.jpg)
 
-**Vistaa 1 y 2 Historia de usuario 2 y 3.**
+**Vista 1 y 2 Historia de usuario 2 y 3.**
+
 ![](src/img/sketch1_H2.jpg)
+
 ![](src/img/sketch2_H2.jpg)
+
 ![](src/img/sketch1_H2_mobile.jpg)
-![](src/img/sketch2_H2y H3_mobile.jpg)
+
+![](src/img/sketch2_H2yH3_mobile.jpg)
 
 **Historia de usuario 4.**
 ![](src/img/sketch1_H4.jpg)
+
 ![](src/img/sketch2_H4.jpg)
 
 Estas imágenes corresponden a las mejoras realizadas en los sketches de acuerdo a los test de usabilidad.
 
 ![](src/img/sketch_H4.jpg)
+
 ![](src/img/cambio_menu.jpg)
+
 ![](src/img/sketch_H1_mobile.jpg)
-=
+
 
 #### Prototipo de alta fidelidad
 Las siguientes imágenes corresponden al prototipo de alta fidelidad realizado en figma, y corresponde al prototipo final para móbile, tablet y desktop.
@@ -167,14 +187,19 @@ Las siguientes imágenes corresponden al prototipo de alta fidelidad realizado e
 **Historia de usuario 1.**
 
 ![](src/img/prot_VistaPpal_mobile.png)
+
 ![](src/img/prot_vista_H1_mobile.png)
 
 **Historia de usuario 2 y 3.**
+
 ![](src/img/prot_vista1_H2yH3_mobile.png)
+
 ![](src/img/prot_vista2_H2yH3_mobile.png)
 
 **Historia de usuario 4.**
+
 ![](src/img/prot_vista1_H4_mobile.png)
+
 ![](src/img/prot_vista2_H4_mobile.png)
 
 Una vez realizado el prototipo inicial de alta fidelidad en figma, se realizaron mejoras en el mismo siguiendo las indicaciones recibidas en el feedback durante lo test de usabilidad. Las siguientes imágenes muestran el proceso de estas mejoras.
@@ -185,7 +210,7 @@ Una vez realizado el prototipo inicial de alta fidelidad en figma, se realizaron
 ![](src/img/vistaH1_desktop.png)
 ![](src/img/cambio_colores.png)
 ![](src/img/cambio_colores2.png)
-![](src/img/cambio color.png)
+![](src/img/cambio_color.png)
 ![](src/img/fondo_mobile.png)
 ![](src/img/vistaPpal_tablet.png)
 ![](src/img/H1_tablet.png)
