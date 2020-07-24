@@ -18,29 +18,31 @@ El presente proyecto presenta un sitio web que se creó con el fin de brindar in
 * Visualizacion del proyecto:
 
 **Vista principal del sitio.**
-![](img/vistaPpal_mobile.png.png)
-![](img/vistaPpal_desktop.png)
+
+![](src/img/vistaPpal_mobile.png.png)
+![](src/img/vistaPpal_desktop.png)
 
 **Vista Historia de usuario 1.**
-![](img/vistaConoceP_mobile.png)
-![](img/vistaConoceP_desktop.png)
+![](src/img/vistaConoceP_mobile.png)
+![](src/img/vistaConoceP_desktop.png)
 
 **Vista 1 Historia de usuario 2.**
-![](img/vistaEvoluciones1_mobile.png)
-![](img/vistaEvoluciones1_desktop.png)
+![](src/img/vistaEvoluciones1_mobile.png)
+![](src/img/vistaEvoluciones1_desktop.png)
 
 **Vista 2 Historia de usuario 2 y 3.**
-![](img/vistaEvoluciones2_mobile.png)
-![](img/vistaEvoluciones2_desktop.png)
+![](src/img/vistaEvoluciones2_mobile.png)
+![](src/img/vistaEvoluciones2_desktop.png)
 
 **Vista 1 Historia de usuario 4.**
-![](img/vistaCombate1_mobile.png)
-![](img/vistaCombate1_desktop.png)
+![](src/img/vistaCombate1_mobile.png)
+![](src/img/vistaCombate1_desktop.png)
 
 **Vista 2 Historia de usuario 4.**
-![](img/vistaCombate2_mobile.png)
-![](img/vistaCombate2_desktop_ganador.png)
-![](img/vistaCombate2_desktop.png)
+![](src/img/vistaCombate2_mobile.png)
+![](src/img/vistaCombate2_desktop_ganador.png)
+![](src/img/vistaCombate2_desktop.png)
+
 
 Datos que se utilizaron para desarrollar el proyecto:
 
@@ -138,59 +140,63 @@ Una vez realizada la investigación de usuarios se identificaron las siguientes 
 Las siguientes imágenes describen los Sketches iniciales diseñados para el proyecto, Mobile, tablet, desktop.
 
 **Vista principal del sitio.** , **Vista 1 Historia de usuario 1.** y **Vista 2 Historia de usuario 1.**
-![](img/sketch1_H1.jpg)
-![](img/sketch2_H1.jpg)
+
+![](src/img/sketch1_H1.jpg)
+![](src/img/sketch2_H1.jpg)
 
 **Vistaa 1 y 2 Historia de usuario 2 y 3.**
-![](img/sketch1_H2.jpg)
-![](img/sketch2_H2.jpg)
-![](img/sketch1_H2_mobile.jpg)
-![](img/sketch2_H2y H3_mobile.jpg)
+![](src/img/sketch1_H2.jpg)
+![](src/img/sketch2_H2.jpg)
+![](src/img/sketch1_H2_mobile.jpg)
+![](src/img/sketch2_H2y H3_mobile.jpg)
 
 **Historia de usuario 4.**
-![](img/sketch1_H4.jpg)
-![](img/sketch2_H4.jpg)
+![](src/img/sketch1_H4.jpg)
+![](src/img/sketch2_H4.jpg)
 
 Estas imágenes corresponden a las mejoras realizadas en los sketches de acuerdo a los test de usabilidad.
 
-![](img/sketch_H4.jpg)
-![](img/cambio_menu.jpg)
-![](img/sketch_H1_mobile.jpg)
+![](src/img/sketch_H4.jpg)
+![](src/img/cambio_menu.jpg)
+![](src/img/sketch_H1_mobile.jpg)
+=
 
 #### Prototipo de alta fidelidad
 Las siguientes imágenes corresponden al prototipo de alta fidelidad realizado en figma, y corresponde al prototipo final para móbile, tablet y desktop.
 
 **Historia de usuario 1.**
-![](img/prot_VistaPpal_mobile.png)
-![](img/prot_vista_H1_mobile.png)
+
+![](src/img/prot_VistaPpal_mobile.png)
+![](src/img/prot_vista_H1_mobile.png)
 
 **Historia de usuario 2 y 3.**
-![](img/prot_vista1_H2yH3_mobile.png)
-![](img/prot_vista2_H2yH3_mobile.png)
+![](src/img/prot_vista1_H2yH3_mobile.png)
+![](src/img/prot_vista2_H2yH3_mobile.png)
 
 **Historia de usuario 4.**
-![](img/prot_vista1_H4_mobile.png)
-![](img/prot_vista2_H4_mobile.png)
+![](src/img/prot_vista1_H4_mobile.png)
+![](src/img/prot_vista2_H4_mobile.png)
 
 Una vez realizado el prototipo inicial de alta fidelidad en figma, se realizaron mejoras en el mismo siguiendo las indicaciones recibidas en el feedback durante lo test de usabilidad. Las siguientes imágenes muestran el proceso de estas mejoras.
 
-![](img/inicial_Ppal.png)
-![](img/inicial_H1.png)
-![](img/vistaPpal_desktop_2.png)
-![](img/vistaH1_desktop.png)
-![](img/cambio_colores.png)
-![](img/cambio_colores2.png)
-![](img/cambio color.png)
-![](img/fondo_mobile.png)
-![](img/vistaPpal_tablet.png)
-![](img/H1_tablet.png)
-![](img/vista2_H2_H3_tablet.png)
-![](img/vista1_H4_tablet.png)
-![](img/vista2_H4_tablet.png)
-![](img/vista1_H2_desktop.png)
-![](img/vista2_H2_H3_desktop.png)
-![](img/vista1_H4.png)
-![](img/vista2_H4.png)
+![](src/img/inicial_Ppal.png)
+![](src/img/inicial_H1.png)
+![](src/img/vistaPpal_desktop_2.png)
+![](src/img/vistaH1_desktop.png)
+![](src/img/cambio_colores.png)
+![](src/img/cambio_colores2.png)
+![](src/img/cambio color.png)
+![](src/img/fondo_mobile.png)
+![](src/img/vistaPpal_tablet.png)
+![](src/img/H1_tablet.png)
+![](src/img/vista2_H2_H3_tablet.png)
+![](src/img/vista1_H4_tablet.png)
+![](src/img/vista2_H4_tablet.png)
+![](src/img/vista1_H2_desktop.png)
+![](src/img/vista2_H2_H3_desktop.png)
+![](src/img/vista1_H4.png)
+![](src/img/vista2_H4.png)
+
 
 
 - **Link a figma:** https://www.figma.com/file/ZOH8ZIJEK2S9eFIdhMG2AN/Data-Lovers?node-id=0%3A1
