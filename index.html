@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Data Lovers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts/iconos.css" />
+
+
+  </head>
+  <body>
+
+    <div class="padre">
+
+      <header> 
+        <div class="logo">
+          <img id="logo" src="img/logo.png" alt="logo_Pokémon">
+        </div>
+        
+        <nav id="menu" class="disableMenu">
+          <ul>
+            <li><a href="#" id="botonMenu1">Inicio</a></li>
+            <li><a href="#" id="botonMenu2">Conoce tu pokémon</a></li>
+            <li><a href="#" id="botonMenu3">Evoluciones</a></li>
+            <li><a href="#" id="botonMenu4">Combate</a></li>
+            
+          </ul>
+          
+      </nav>
+      <button id="btnMenuNav" style="font-size:24px"><i class="fas fa-bars"></i></button>
+      <!-- <div id="btnMenuNav">
+        <a href="#" class="fas fa-bars"></a>
+      </div> -->
+
+      </header>
+    
+      <div id="root">
+
+        <div id="vistaPpal">
+          
+            <p><br>Bienvenido <br><br>
+              DESCUBRE EL MUNDO DE POKÉMON: <br><br>
+              Explora, descubre y atrapa nuevos Pokémon donde vayas,<br> haz que tu pokémon sea más fuerte<br> y compite en épicos combates de Gimnasio.<br><br>
+              ¡Es hora de ponerse en marcha! <br><br><br>
+              ¡Te esperan miles de aventuras!<br><br>
+              ¡Let's GO!</p>
+
+        </div>
+
+
+        <div id="vistaConoceP">
+          <p id="tituloVistaConocer">Encuentra tu Pokémon por número o nombre</p>
+          
+          <div class="buscarP">
+            <label for="">Número o Nombre</label>
+            <input type="text" id="numPokemon">
+            <button class="btn" id="boton">Buscar</button>
+          </div>
+          
+          <div id="carateristicas">
+              <div id="imgPokemon">
+                <img id="imgPok"/>
+                <p class="textImage" id="textNumber"></p>
+                <p class="textImage" id="textName"></p>
+              </div>
+              
+
+            <div id="detallePokemon">
+              
+              <h3 class="line1DetalleP">Características Únicas</h3>
+
+              <div class="line2DetalleP">
+                  <div class="alturaPeso">
+
+                    <div class="height"> 
+                      <p class="tituloatributo">Altura</p>
+                      <p class="altuPesoValor" id="alturavalordata"></p>
+                    </div>
+
+                    <div class="weight">
+                        <p class="tituloatributo">Peso</p>
+                        <p class="altuPesoValor"  id="pesovalordata"></p>
+                    </div>
+                  </div>
+
+                  <div class="contenidoMultiplicador">
+                    <div class="titulosDetallesP">
+                      <p class="tituloatributo">Multiplicador</p>
+                    </div>
+                    <div id="multipliers"></div>  <!--  Se imprimen los valores de la data-->
+                  </div>
+                </div>
+
+              <div class="line3DetalleP">
+                <div class="contenidoTypes">
+                    <div class="titulosDetallesP">
+                      <p class="tituloatributo">Tipo</p>
+                    </div>
+                    <div id="typePokemon"></div>
+                </div>
+
+                    <div class="contenidoDebilidades">
+                      <div class="titulosDetallesP">
+                        <p class="tituloatributo">Debilidades</p>
+                      </div>
+                      <div id="weaknesses"></div>
+                    </div>
+
+              </div>
+            </div>
+            <button id="btnCloseFeaturesPok" class="btnCerrar"><i class="far fa-window-close"></i></button>
+          </div>
+         
+            </div>
+          
+            
+          <div id="vistaEvoluciones">
+            <div class="ordPokemon">
+              <label for="ordenarPk">Ordenar por nombre</label>
+              <button id="ordenarPk" class="ordenar"><i class="fas fa-sort-alpha-down"></i></button>
+            </div>
+            
+            <div id="listaPokemon">
+            </div>
+          </div>
+
+            <div id="vistaDetalleEvoluciones">
+              <h3>Evoluciones</h3>
+              <div id="containerEvoluciones">
+                
+                <div id="contenedorActual">
+                  <h3>Pokémon Seleccionado</h3>
+                  <div id="actualPokemon">
+                  </div>
+                </div>
+
+                <div id="containerPrev">
+                  <h3>Pre-Evolution</h3>
+                  <div id="prevEvolution">
+                  </div>
+                </div>
+
+                <div id="containerNext">
+                  <h3>Next Evolution</h3>
+                  <div id="nextEvolution">
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div id="containerCandy">
+                <h3>Requisitos Candies Evolución</h3>   
+              <div id="candyEvolution">
+                             
+              </div>
+            </div>
+              
+              <button id="backEvolution" class="btnCerrar"><i class="far fa-window-close"></i></button>
+            </div>
+            
+          <!-- historia 4 combate -->
+          <div id="vistaCombate">
+            <div id="game"> 
+              <h1 id= "resultado"></h1>
+              <h2 id="namegame"></h2>
+              <button class="btn" id="botonVolver">Volver a Jugar</button>
+            </div>
+            <!-- <p> Que Comience el Combate</p>
+          <button class="btn" id="botonCombate"> Selecciona Tu Rival</button> 
+          <button class="btn" id="seleccionaTuPokemon">seleccionaTuPokemon</button>
+          <button class="btn" id= "probabilidadCombate">  Iniciar Combate </button> -->
+          <div id="fondocombate1"> 
+            <input class="iniciodecombate" id="titulopoke" type="image" src="img/titulopokemon.png">
+            <input class="iniciodecombate" id="pokebola" type="image" src="img/gifpokebola.gif">
+          </div>
+          <div id="fondocombate2">
+            <div  class="pokemonrival">
+                <div class="cajadeinformacion"> 
+                  <div class="cajita"> 
+                  <h5 id="nombrepokemonrival"></h5>
+                  <div class="barradeenergia" id="barraRival"></div>
+                  </div>
+                </div>
+                <div class="imgpokemonrival">
+                  <img id="pokeRival"/>
+                </div>
+            </div>
+            <div class="tupokemon1" id="tupokemon1">
+              <label  for="">Escoge tu pokemon</label>
+              <input type="text" id="numPokemon2">
+              <button class="btn" id="botonSeleccionar">Seleccionar</button>
+            </div>
+
+            <div class="tupokemon" id="tupokemon">
+                <div class="imgpokemontuyo">
+                  <img id="pokeTuyo"/>
+                </div>
+                <div class="cajadeinformacionTuyo"> 
+
+                  <div id="cajita2"> 
+                  <h5 id="nombrepokemonTuyo"></h5>
+                  <div class="barradeenergia" id="barraTuya"></div>
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+
+          </div>
+  
+
+  
+        </div> 
+
+        <footer> 
+          <p>Autoras: Karla Guaita - Marcela Coronel</p> 
+          <p>2020</p>
+        </footer>
+
+      </div>
+
+        
+
+
+    <script src="main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
