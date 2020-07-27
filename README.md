@@ -115,7 +115,7 @@ Los principales objetivos de aprendizaje alcanzados en este proyecto son:
 
 * [x] Diseñar la aplicación pensando y entendiendo al usuario.
 * [x] Crear prototipos para obtener feedback e iterar.
-* [] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
+* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 * [ ] Planear y ejecutar tests de usabilidad.
 
 ## 4. Consideraciones generales
